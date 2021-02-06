@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 import pprint
 import string
@@ -56,6 +57,21 @@ def augment_query(query, relevant_articles):
     denselist = dense.tolist()
     df = pd.DataFrame(denselist, columns=feature_names)
     print(df)
+
+    final = []
+    for i in range(len(denselist)):
+        print(denselist[i])
+        merge_list = list(zip(feature_names, denselist[i]))
+        sorted_list = sorted(merge_list, key = lambda x: x[1], reverse = True)[:6]
+        final += sorted_list
+    
+    sorted_final = sorted(final, key = lambda x: x[1], reverse = True)
+    print(sorted_final)
+    
+
+    
+    # inverted_list = vectorizer.inverse_transform(vectors)
+    # print(inverted_list[2])
     import code; code.interact(local=dict(globals(), **locals())) #interrupt can delete
     return query
 
