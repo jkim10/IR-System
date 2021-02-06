@@ -18,58 +18,46 @@ def get_query(api_key, engine_key, query):
     ).execute()
     return res['items']
 
-# Ignore this please :)
-# def augment_query(query, relevant_articles):
-#     if not relevant_articles:
-#         return ""
-#     inverted_index = {}
-#     doc_id = 1
-#     for article in relevant_articles:
-#         current_index = {}
-#         snippet = article['snippet'] + " " + article['title']
-#         snippet = snippet.lower()
-#         normalized = snippet.translate(str.maketrans('', '', string.punctuation))
-#         tokens = normalized.split()
-#         my_word_dict = {word:(tokens.count(word),doc_id) for word in set(tokens)}
-#         for key in my_word_dict.keys():
-#             if key in inverted_index:
-#                 inverted_index[key].append(my_word_dict[key])
-#             else:
-#                 inverted_index[key] = [my_word_dict[key]]
-    
-#     pprint.pprint(inverted_index)
-#     quit()
+def normalize_text(text):
+    text = text.lower()
+    text = text.translate(str.maketrans('','', string.punctuation))
+    return text
 
-
-#     return query
-
-def td_idf(relevant, irrelevant):
-    cleaned = []
+def td_idf(relevant, irrelevant,query):
+    cleaned = [normalize_text(query)]
     documents = relevant + irrelevant
     for article in documents:
         snippet = article.get('snippet','') + " " + article['title']
-        snippet = snippet.lower()
-        normalized = snippet.translate(str.maketrans('', '', string.punctuation))
-        cleaned.append(normalized)
+        cleaned.append(normalize_text(snippet))
     tfidf_vectorizer = TfidfVectorizer(stop_words="english", sublinear_tf=True, min_df=2)
     vectors = tfidf_vectorizer.fit_transform(cleaned)
     feature_names = tfidf_vectorizer.get_feature_names()
     dense = vectors.todense()
     denselist = dense.tolist()
     df = pd.DataFrame(denselist, columns=feature_names)
-    return (df.iloc[:len(relevant)],df.tail(len(irrelevant)))
+    return (df.head(),df.iloc[1:len(relevant)+1],df.tail(len(irrelevant)))
 
 def augment_query(query, relevant_articles, irrelevant_articles):
     if not relevant_articles:
         return ""
     # relevant_vector = td_idf(relevant_articles)
     # irrelevant_vector = td_idf(irrelevant_articles)
-    (relevant_vector, irrelevant_vector) = td_idf(relevant_articles,irrelevant_articles)
+    (query_vector, relevant_vector, irrelevant_vector) = td_idf(relevant_articles,irrelevant_articles, query)
     ## Rocchio
+    term1 = dict(((query_vector * alpha)).sum())
     term2 = dict(((relevant_vector * beta) / len(relevant_articles)).sum())
     term3 = dict(((irrelevant_vector * gamma) / len(irrelevant_articles)).sum())
-    result = {key: max(0, term2[key] - term3.get(key, 0)) for key in term2}
-    return " ".join(sorted(result, key=result.get, reverse=True)[:2])
+    result = {key: max(0, term1.get(key,0) + term2[key] - term3.get(key, 0)) for key in term2}
+    sorted_result = sorted(result, key=result.get, reverse=True)
+    augment = []
+    for word in sorted_result:
+        if(len(augment) == 2):
+            break
+        else:
+            if(word not in query):
+                augment.append(word)           
+
+    return " ".join(augment)
 
 
 
