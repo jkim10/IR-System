@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 import pprint
 import string
@@ -62,9 +63,6 @@ def augment_query(query, relevant_articles, irrelevant_articles):
                 augment.append(word)           
 
     return " ".join(augment)
-
-
-
 
 
 
