@@ -1,5 +1,8 @@
 import sys
 import pprint
+import string
+import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 from googleapiclient.discovery import build
 
@@ -11,13 +14,51 @@ def get_query(api_key, engine_key, query):
     ).execute()
     return res['items']
 
+# Ignore this please :)
+# def augment_query(query, relevant_articles):
+#     if not relevant_articles:
+#         return ""
+#     inverted_index = {}
+#     doc_id = 1
+#     for article in relevant_articles:
+#         current_index = {}
+#         snippet = article['snippet'] + " " + article['title']
+#         snippet = snippet.lower()
+#         normalized = snippet.translate(str.maketrans('', '', string.punctuation))
+#         tokens = normalized.split()
+#         my_word_dict = {word:(tokens.count(word),doc_id) for word in set(tokens)}
+#         for key in my_word_dict.keys():
+#             if key in inverted_index:
+#                 inverted_index[key].append(my_word_dict[key])
+#             else:
+#                 inverted_index[key] = [my_word_dict[key]]
+    
+#     pprint.pprint(inverted_index)
+#     quit()
+
+
+#     return query
+
 def augment_query(query, relevant_articles):
     if not relevant_articles:
         return ""
-    
-    #TODO Augment based on relevant articles
-
+    cleaned = []
+    for article in relevant_articles:
+        current_index = {}
+        snippet = article['snippet'] + " " + article['title']
+        snippet = snippet.lower()
+        normalized = snippet.translate(str.maketrans('', '', string.punctuation))
+        cleaned.append(normalized)
+    vectorizer = TfidfVectorizer(stop_words="english")
+    vectors = vectorizer.fit_transform(cleaned)
+    feature_names = vectorizer.get_feature_names()
+    dense = vectors.todense()
+    denselist = dense.tolist()
+    df = pd.DataFrame(denselist, columns=feature_names)
+    print(df)
+    import code; code.interact(local=dict(globals(), **locals())) #interrupt can delete
     return query
+
 
 
 
