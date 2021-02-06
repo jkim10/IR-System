@@ -5,10 +5,13 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from collections import defaultdict
 from googleapiclient.discovery import build
+from nltk.stem import PorterStemmer 
 
 alpha = 1.0
-beta = 1.0
-gamma = 0.5
+beta = 0.75
+gamma = 0.15
+
+ps = PorterStemmer() 
 
 def get_query(api_key, engine_key, query):
     s = build("customsearch","v1",developerKey=api_key)
@@ -21,6 +24,7 @@ def get_query(api_key, engine_key, query):
 def normalize_text(text):
     text = text.lower()
     text = text.translate(str.maketrans('','', string.punctuation))
+    text = ps.stem(text)
     return text
 
 def td_idf(relevant, irrelevant,query):
