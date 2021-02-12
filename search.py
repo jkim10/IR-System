@@ -14,6 +14,7 @@ gamma = 0.15
 
 ps = PorterStemmer() 
 
+# Method to get top ten results from Google Custom Search API (From example in Project 1)
 def get_query(api_key, engine_key, query):
     s = build("customsearch","v1",developerKey=api_key)
     res = s.cse().list(
@@ -22,12 +23,14 @@ def get_query(api_key, engine_key, query):
     ).execute()
     return res['items']
 
+# Holds all the normalizing we want (stemming, lowercasing, punctuation)
 def normalize_text(text):
     text = text.lower()
     text = text.translate(str.maketrans('','', string.punctuation))
     text = ps.stem(text)
     return text
 
+#Calculate TF-IDF Table
 def td_idf(relevant, irrelevant,query):
     cleaned = [normalize_text(query)]
     documents = relevant + irrelevant
@@ -37,16 +40,13 @@ def td_idf(relevant, irrelevant,query):
     tfidf_vectorizer = TfidfVectorizer(stop_words="english", sublinear_tf=True, min_df=2)
     vectors = tfidf_vectorizer.fit_transform(cleaned)
     feature_names = tfidf_vectorizer.get_feature_names()
-    dense = vectors.todense()
-    denselist = dense.tolist()
-    df = pd.DataFrame(denselist, columns=feature_names)
-    return (df.head(),df.iloc[1:len(relevant)+1],df.tail(len(irrelevant)))
+    df = pd.DataFrame(vectors.todense().tolist(), columns=feature_names)
+    return (df.head(),df.iloc[1:len(relevant)+1],df.tail(len(irrelevant))) # Return first the query, the relevant, and then the irrelevant
 
+# Method to augment query. Returns addition to query
 def augment_query(query, relevant_articles, irrelevant_articles):
     if not relevant_articles:
         return ""
-    # relevant_vector = td_idf(relevant_articles)
-    # irrelevant_vector = td_idf(irrelevant_articles)
     (query_vector, relevant_vector, irrelevant_vector) = td_idf(relevant_articles,irrelevant_articles, query)
     ## Rocchio
     term1 = dict(((query_vector * alpha)).sum())
