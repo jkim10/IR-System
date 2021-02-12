@@ -37,7 +37,7 @@ def tf_idf(relevant, irrelevant,query):
     for article in documents:
         snippet = article.get('snippet','') + " " + article['title']
         cleaned.append(normalize_text(snippet))
-    tfidf_vectorizer = TfidfVectorizer(stop_words="english", sublinear_tf=True, min_df=2)
+    tfidf_vectorizer = TfidfVectorizer(stop_words="english", sublinear_tf=True)
     vectors = tfidf_vectorizer.fit_transform(cleaned)
     feature_names = tfidf_vectorizer.get_feature_names()
     df = pd.DataFrame(vectors.todense().tolist(), columns=feature_names)
