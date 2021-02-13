@@ -1,0 +1,192 @@
+Parameters:
+Client Key = AIzaSyC6uXsEBblG4JwiO7X25rG5RDUdQrOmrkc
+Engine Key = db7c825fd9c7885a2
+Query      = cases
+Precision  = 0.9
+Google Search Results:
+======================
+Result 1
+[
+ URL: https://www.cases.org/
+ Title: CASES: Home
+ Summary: From court and program offices in the Bronx, Brooklyn, and Manhattan, CASES 
+provides community-based alternatives to jail and prison. These programs 
+address ...
+]
+
+Relevant (Y/N)?Result 2
+[
+ URL: https://www.worldometers.info/coronavirus/?utm_campaign...
+ Title: Coronavirus Update (Live): 108,298,441 Cases and 2,378,865 ...
+ Summary: Live statistics and coronavirus news tracking the number of confirmed cases, 
+recovered patients, tests, and death toll due to the COVID-19 coronavirus from ...
+]
+
+Relevant (Y/N)?Result 3
+[
+ URL: https://www.dhs.wisconsin.gov/covid-19/cases.htm
+ Title: COVID-19: Wisconsin Cases | Wisconsin Department of Health ...
+ Summary: Confirmed cases by age group by date of symptom onset or diagnosis; Percent of 
+confirmed or probable cases by demographics and region; Percent of cases ...
+]
+
+Relevant (Y/N)?Result 4
+[
+ URL: https://www.worldometers.info/coronavirus/
+ Title: Coronavirus Update (Live): 108,815,213 Cases and 2,396,053 ...
+ Summary: Live statistics and coronavirus news tracking the number of confirmed cases, 
+recovered patients, tests, and death toll due to the COVID-19 coronavirus from ...
+]
+
+Relevant (Y/N)?Result 5
+[
+ URL: https://www.cdc.gov/measles/cases-outbreaks.html
+ Title: Measles Cases and Outbreaks | CDC
+ Summary: From January 1 to December 31, 2019, 1,282* individual cases of measles were 
+confirmed in 31 states. This is the greatest number of cases reported in the U.S. ...
+]
+
+Relevant (Y/N)?Result 6
+[
+ URL: https://www.courts.mo.gov/casenet/cases/nameSearch.do
+ Title: Casenet
+ Summary: null
+]
+
+Relevant (Y/N)?Result 7
+[
+ URL: https://www.mass.gov/info-details/covid-19-response-reporting
+ Title: COVID-19 Response Reporting | Mass.gov
+ Summary: Case and testing information by city/town; Contact tracing cases and outreach; 
+Individuals released from isolation (recovered); Cases and deaths in Long Term
+ ...
+]
+
+Relevant (Y/N)?Result 8
+[
+ URL: https://www.npr.org/.../map-tracking-the-spread-of-the-coronavirus-in-the-u- s
+ Title: Coronavirus Update: Maps And Charts For U.S. Cases And Deaths ...
+ Summary: 1 day ago ... Tens of thousands of new cases are reported daily nationwide. In the graphics 
+below, explore the trends in your state. View the data via a heat ...
+]
+
+Relevant (Y/N)?Result 9
+[
+ URL: https://pbskids.org/oddsquad/games/cases
+ Title: Odd Squad: Cases
+ Summary: Visit Your Profile. Your Avatar. logout. Sign In To PBS KIDS. Apps · Shop · 
+Parents · WPTD WPTD station logo. TV Times; Settings. PBS KIDS Settings. 
+Close ...
+]
+
+Relevant (Y/N)?Result 10
+[
+ URL: https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/...
+ Title: Coronavirus COVID-19 (2019-nCoV)
+ Summary: Case-Fatality Ratio (%) = Number recorded deaths / Number cases. US Testing 
+Rate: = total test results per 100,000 persons. The "total test results" are equal to "
+ ...
+]
+
+Relevant (Y/N)?======================
+FEEDBACK SUMMARY
+Query cases
+Precision 0.6
+Still below the desired precision of 0.9
+Indexing Results ....
+Indexing Results ....
+Augmenting by coronavirus live
+Parameters:
+Client Key = AIzaSyC6uXsEBblG4JwiO7X25rG5RDUdQrOmrkc
+Engine Key = db7c825fd9c7885a2
+Query      = cases coronavirus live
+Precision  = 0.9
+Google Search Results:
+======================
+Result 1
+[
+ URL: https://www.worldometers.info/coronavirus/
+ Title: Coronavirus Update (Live): 108,815,213 Cases and 2,396,053 ...
+ Summary: Live statistics and coronavirus news tracking the number of confirmed cases, 
+recovered patients, tests, and death toll due to the COVID-19 coronavirus from ...
+]
+
+Relevant (Y/N)?Result 2
+[
+ URL: https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/...
+ Title: Coronavirus COVID-19 (2019-nCoV)
+ Summary: Lead by JHU CSSE. Technical Support: Esri Living Atlas team and JHU APL. ... 
+US state-level recovered cases are from COVID Tracking Project. Active cases ...
+]
+
+Relevant (Y/N)?Result 3
+[
+ URL: https://www.worldometers.info/coronavirus/?utm_campaign...
+ Title: Coronavirus Update (Live): 108,298,441 Cases and 2,378,865 ...
+ Summary: Live statistics and coronavirus news tracking the number of confirmed cases, 
+recovered patients, tests, and death toll due to the COVID-19 coronavirus from ...
+]
+
+Relevant (Y/N)?Result 4
+[
+ URL: https://www.kmbc.com/.../covid...live...coronavirus...coronavirus.../ 35480928
+ Title: COVID-19 LIVE UPDATES: Missouri says 9.7% of population has ...
+ Summary: 14 hours ago ... 2 p.m. -- The Kansas Department of Health and Environment reported an 
+increase of 1,208 confirmed cases of COVID-19 in its first update since ...
+]
+
+Relevant (Y/N)?Result 5
+[
+ URL: https://www.fox10phoenix.com/news/coronavirus-in-arizona-latest-numbers
+ Title: Coronavirus in Arizona: Latest case numbers
+ Summary: Nov 2, 2020 ... The latest information on coronavirus cases in the state, from the Arizona ... 
+Mobile app users: Click here to view the live blog content.
+]
+
+Relevant (Y/N)?Result 6
+[
+ URL: https://www.arcgis.com/apps/opsdashboard/index.html
+ Title: Sign In
+ Summary: Keep me signed in. Sign In Cancel. Forgot username? or Forgot password? Your 
+ArcGIS organization's URL. Enter another organization .maps.arcgis.com.
+]
+
+Relevant (Y/N)?Result 7
+[
+ URL: https://www.kpbs.org/news/.../coronavirus-san-diego-live-updates-covid-19/
+ Title: Live Blog: San Diego County Reports 3,027 COVID-19 Cases, 28 ...
+ Summary: Jan 15, 2021 ... This is a breaking news blog for all of the latest updates about the coronavirus 
+pandemic.
+]
+
+Relevant (Y/N)?Result 8
+[
+ URL: https://www.washingtonpost.com/coronavirus/
+ Title: Coronavirus - The Washington Post
+ Summary: News and updates about the coronavirus pandemic: Cases in the US, death toll, 
+what ... The Washington Post is providing our daily live updates, comprehensive
+ ...
+]
+
+Relevant (Y/N)?Result 9
+[
+ URL: https://www.kpbs.org/news/2020/mar/21/coronavirus-live-updates/
+ Title: Live Blog: San Diego Zoo Gorillas Test Positive For COVID-19 | KPBS
+ Summary: San Diego County public health officials have reported 3,288 new COVID-19 
+infections and 33 additional deaths from the virus. The county's cumulative cases
+ ...
+]
+
+Relevant (Y/N)?Result 10
+[
+ URL: https://www.sfchronicle.com/coronavirus/.../Coronavirus-live-updates-news- bay-area-15237940.php
+ Title: Coronavirus live updates: Pentagon to deploy 20 more vaccination ...
+ Summary: 391,810 cases in the Bay Area, including 4,745 deaths. Click on The Chronicle's 
+Coronavirus Tracker for a U.S. map and state by state case count and tally of ...
+]
+
+Relevant (Y/N)?======================
+FEEDBACK SUMMARY
+Query cases coronavirus live
+Precision 0.9
+Desired precision reached, done
