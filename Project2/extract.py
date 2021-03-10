@@ -9,6 +9,7 @@ from spanbert import SpanBERT
 import spacy
 from spacy_help_functions import get_entities, create_entity_pairs
 
+queried = set()
 extracted_tuples = set()
 spanbert = SpanBERT("./pretrained_spanbert")
 nlp = spacy.load("en_core_web_lg")
@@ -85,6 +86,34 @@ def annotate(text, relationship, threshold):
         index +=1    
     return doc
 
+def spanBert_phase(threshhold, relation, num_tuples,  queried, extracted_tuples, candidate_pairs):
+    relation_preds = spanbert.predict(candidate_pairs)
+    for ex, pred in list(zip(candidate_pairs, relation_preds)):
+        print("\tSubject: {}\tObject: {}\tRelation: {}\tConfidence: {:.2f}".format(ex["subj"][0], ex["obj"][0], pred[0], pred[1]))
+        if (pred[0] == possible_relations[relation][0]):
+            confidence = pred[1]
+            if (confidence >= threhold):
+                curr_tuple = (ex["subj"][0], ex["obj"][0]), confidence)
+                if curr_tuple not in extracted_tuples:
+                    extracted_tuples.add(curr_tuple)
+            else:
+                continue
+    
+    sorted_extracted_tuples = sorted(extracted_tuples, key=lambda tup: tup[2], reverse=True)
+    if(len(extracted_tuples) < num_tuples):
+        new_query = ""
+        for entry in sorted_extracted_tuples:
+            temp_query = entry[0] + " " + entry[1]
+            if temp_query not in queried:
+                new_query = temp_query
+                break
+        
+        print("This is the new query {}".format(new_query))
+        return (False, new_query)
+    else:
+        return (True, sorted_extracted_tuples)
+            
+
 if __name__ == "__main__":
     # First parse and validate arguments
     if(len(sys.argv) != 7):
@@ -109,9 +138,9 @@ if __name__ == "__main__":
     print("Loading necessary libraries; This should take a minute or so ...")
 
     iterations = 0
-    queried = set()
+    
     seen_urls = []
-    while((len(extracted_tuples) < num_tuples) and (iterations != 1)):
+    while(iterations != 1):
         print(f"=========== Iteration: {iterations} - Query: {query} ===========")
         results = get_query(client_key,engine_key,query)
         num_urls = len(results)
@@ -123,5 +152,18 @@ if __name__ == "__main__":
                 text = to_plaintext(url)
                 print(f"\tWebpage length (num characters): {len(text)}")
                 annotated = annotate(text,relation, threshold)
+        
         print(seen_urls)
+        
+        iter_result = spanBert_phase(threshhold, relation, num_tuples, candidate_pairs)
+        if (iter_result[0] and iter_result[1] > 0):
+            query = iter_result[1]
+        else if (iter_result[0]):
+            printf("ISE has stalled before retrieving k high-confidence tuples")
+            return
+        else:
+            print(iter_result[1])
+            return
+                      
+        
         iterations+=1   
