@@ -111,7 +111,7 @@ def spanBert_phase(threshhold, relation, num_tuples,  queried, extracted_tuples,
         print("This is the new query {}".format(new_query))
         return (False, new_query)
     else:
-        return (True, sorted_extracted_tuples)
+        return (True, sorted_extracted_tuples, len(sorted_extracted_tuples))
             
 
 if __name__ == "__main__":
@@ -162,8 +162,11 @@ if __name__ == "__main__":
             printf("ISE has stalled before retrieving k high-confidence tuples")
             return
         else:
-            print(iter_result[1])
+
+            print(f"============= ALL RELATIONS for {possible_relations[relation][0]} ({iter_result[2]}) =============")
+            for res in iter_result[1]:
+                print(f"Confidence: {res[2]}          | Subject: {res[0]}       | Object: {res[1]}")
+            print(f"Total # of iterations = {iterations}")
             return
-                      
-        
+                          
         iterations+=1   
