@@ -10,7 +10,7 @@ import spacy
 from spacy_help_functions import get_entities, create_entity_pairs
 
 queried = set()
-extracted_tuples = set()
+extracted_tuples = dict()
 spanbert = SpanBERT("./pretrained_spanbert")
 nlp = spacy.load("en_core_web_lg")
 possible_relations = [("per:schools_attended","PERSON", ["ORGANIZATION"]),
@@ -71,48 +71,40 @@ def annotate(text, relationship, threshold):
         for ex, pred in list(zip(candidate_pairs, relation_preds)):
             r = pred[0]
             confidence = pred[1]
-            subject = ex["subj"][0]
-            object = ex["obj"][0]
+            subj = ex["subj"][0]
+            obj = ex["obj"][0]
             if((r == possible_relations[relationship][0])):
                 print(f"\t\t=== Extracted Relation ===")
                 print(f"\t\tSentence: {sentence}")
-                print(f"\t\tConfidence: {confidence}; Subject: {subject}; Object: {object}")
+                print(f"\t\tConfidence: {confidence}; Subject: {subj}; Object: {obj}")
                 if((confidence >= threshold)):
                     print(f"\t\tAdding to the set of extracted relations")
-                    extracted_tuples.add((subject,object,confidence))
+                    key = (subj, obj)
+                    if key in extracted_tuples:
+                       extracted_tuples[key] = max(extracted_tuples[key], confidence) 
+                    else:
+                       extracted_tuples[key] = confidence
                 else:
                     print(f"\t\tConfidence is lower than threshold confidence. Ignoring this.")
                 print(f"\t\t==========")        
+        
+
         index +=1    
     return doc
 
-def spanBert_phase(threshhold, relation, num_tuples,  queried, extracted_tuples, candidate_pairs):
-    relation_preds = spanbert.predict(candidate_pairs)
-    for ex, pred in list(zip(candidate_pairs, relation_preds)):
-        print("\tSubject: {}\tObject: {}\tRelation: {}\tConfidence: {:.2f}".format(ex["subj"][0], ex["obj"][0], pred[0], pred[1]))
-        if (pred[0] == possible_relations[relation][0]):
-            confidence = pred[1]
-            if (confidence >= threhold):
-                curr_tuple = (ex["subj"][0], ex["obj"][0]), confidence)
-                if curr_tuple not in extracted_tuples:
-                    extracted_tuples.add(curr_tuple)
-            else:
-                continue
+#def spanBert_phase(threshhold, relation, num_tuples,  queried, extracted_tuples, candidate_pairs):
+#    relation_preds = spanbert.predict(candidate_pairs)
+#    for ex, pred in list(zip(candidate_pairs, relation_preds)):
+#        if (pred[0] == possible_relations[relation][0]):
+#            confidence = pred[1]
+#            if (confidence >= threhold):
+#                curr_tuple = (ex["subj"][0], ex["obj"][0]), confidence)
+#                if curr_tuple not in extracted_tuples:
+#                    extracted_tuples.add(curr_tuple)
+#            else:
+#                continue
     
-    sorted_extracted_tuples = sorted(extracted_tuples, key=lambda tup: tup[2], reverse=True)
-    if(len(extracted_tuples) < num_tuples):
-        new_query = ""
-        for entry in sorted_extracted_tuples:
-            temp_query = entry[0] + " " + entry[1]
-            if temp_query not in queried:
-                new_query = temp_query
-                break
-        
-        print("This is the new query {}".format(new_query))
-        return (False, new_query)
-    else:
-        return (True, sorted_extracted_tuples, len(sorted_extracted_tuples))
-            
+           
 
 if __name__ == "__main__":
     # First parse and validate arguments
@@ -155,18 +147,23 @@ if __name__ == "__main__":
         
         print(seen_urls)
         
-        iter_result = spanBert_phase(threshhold, relation, num_tuples, candidate_pairs)
-        if (iter_result[0] and iter_result[1] > 0):
-            query = iter_result[1]
-        else if (iter_result[0]):
-            printf("ISE has stalled before retrieving k high-confidence tuples")
-            return
+        sorted_extracted_tuples = sorted(extracted_tuples.items(), key=lambda item: item[1], reverse=True)
+        if(len(extracted_tuples) < num_tuples):
+            new_query = ""
+            for entry in sorted_extracted_tuples:
+                temp_query = entry[0][0] + " " + entry[0][1]
+                if temp_query not in queried:
+                    new_query = temp_query
+                    break
+            print("This is the new query {}".format(new_query))
+            if (len(new_query) < 1):
+                print("ISE has stalled before retrieving k high-confidence tuples")
+                break
         else:
-
-            print(f"============= ALL RELATIONS for {possible_relations[relation][0]} ({iter_result[2]}) =============")
-            for res in iter_result[1]:
+            print(f"============= ALL RELATIONS for {possible_relations[relation][0]} ({len(extracted_tuples)}) =============")
+            for res in sorted_extracted_tuples:
                 print(f"Confidence: {res[2]}          | Subject: {res[0]}       | Object: {res[1]}")
             print(f"Total # of iterations = {iterations}")
-            return
+            break
                           
         iterations+=1   
