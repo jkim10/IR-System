@@ -152,6 +152,7 @@ if __name__ == "__main__":
     seen_urls = []
     while((True) and (len(extracted_tuples) < num_tuples)):
         print(f"=========== Iteration: {iterations} - Query: {query} ===========")
+        queried.add(query)
         results = get_query(client_key,engine_key,query)
         # results = [ {"link": "https://en.wikipedia.org/wiki/Mark_Zuckerberg"},
         #             {"link": "https://news.harvard.edu/gazette/story/2017/05/mark-zuckerbergs-speech-as-written-for-harvards-class-of-2017/"},
@@ -197,6 +198,6 @@ if __name__ == "__main__":
             print(f"Confidence: {res[1]}          | Subject: {res[0][0]}       | Object: {res[0][1]}")
                           
         iterations+=1
-    print(f"Total # of iterations = {iterations+1}")
+    print(f"Total # of iterations = {iterations}")
 
     
