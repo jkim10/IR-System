@@ -2,6 +2,7 @@
 import sys
 import urllib
 import requests
+import html
 from bs4 import BeautifulSoup
 from googleapiclient.discovery import build
 from spanbert import SpanBERT
@@ -31,7 +32,7 @@ def to_plaintext(url):
     print("\tFetching text from url ...")
     try:
         res = requests.get(url)
-        html_page = res.content
+        html_page = html.unescape(res.text)
         soup = BeautifulSoup(html_page, 'html.parser')
         [s.decompose() for s in (soup(['img','script','head','ul','li','ol','nav']))]
         text = soup.get_text(strip=True, separator=' ').replace("\n", "").replace("\t", "")
@@ -46,19 +47,20 @@ def annotate(text, relationship, threshold):
     target_objects = possible_relations[relationship][2]
     entities_of_interest = target_objects + [target_subject]
     doc = nlp(text)
-    num_sentences = len(list(doc.sents))
+    sentences = [x for x in list(doc.sents) if (len(str(x).strip()) > 1) and (len(get_entities(x,entities_of_interest)) >1)] 
+    num_sentences = len(sentences)
 
     print(f"\tExtracted {num_sentences} sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...")
     index = 1
     num_extracted = 0
     num_relations = 0
     num_overall = 0
-    for sentence in doc.sents:    
+    for sentence in sentences:
         flag = False
         if((index%5==0)):
             print(f"\tProcessed {index} / {num_sentences} sentences")
         candidate_pairs = []
-        sentence_entity_pairs = create_entity_pairs(sentence.strip(), entities_of_interest)
+        sentence_entity_pairs = create_entity_pairs(sentence, entities_of_interest)
         for ep in sentence_entity_pairs:
             # TODO: keep subject-object pairs of the right type for the target relation (e.g., Person:Organization for the "Work_For" relation)
             if((ep[1][1] == target_subject) and (ep[2][1] in target_objects)):
@@ -74,13 +76,13 @@ def annotate(text, relationship, threshold):
     
         relation_preds = spanbert.predict(candidate_pairs)  # get predictions: list of (relation, confidence) pairs
         for ex, pred in list(zip(candidate_pairs, relation_preds)):
-            num_overall +=1
             r = pred[0]
             confidence = pred[1]
             subj = ex["subj"][0]
             obj = ex["obj"][0]
             if((r == possible_relations[relationship][0])):
                 print(f"\t\t=== Extracted Relation ===")
+                num_overall +=1
                 print(f"\t\tSentence: {sentence}")
                 print(f"\t\tConfidence: {confidence}; Subject: {subj}; Object: {obj}")
                 if((confidence >= threshold)):
@@ -148,7 +150,7 @@ if __name__ == "__main__":
     iterations = 0
     
     seen_urls = []
-    while((iterations != 1) or (len(extracted_tuples) < num_tuples)):
+    while((True) and (len(extracted_tuples) < num_tuples)):
         print(f"=========== Iteration: {iterations} - Query: {query} ===========")
         results = get_query(client_key,engine_key,query)
         # results = [ {"link": "https://en.wikipedia.org/wiki/Mark_Zuckerberg"},
@@ -176,10 +178,6 @@ if __name__ == "__main__":
                 print(f"URL already seen. skipping...")
                 
         sorted_extracted_tuples = sorted(extracted_tuples.items(), key=lambda item: item[1], reverse=True)
-        print(f"============= ALL RELATIONS for {possible_relations[relation][0]} ({len(extracted_tuples)}) =============")
-        for res in sorted_extracted_tuples:
-            print(f"Confidence: {res[1]}          | Subject: {res[0][0]}       | Object: {res[0][1]}")
-   
         if(len(extracted_tuples) < num_tuples):
             old_query = query
             for entry in sorted_extracted_tuples:
@@ -190,7 +188,13 @@ if __name__ == "__main__":
             print("This is the new query {}".format(query))
             if (old_query == query):
                 print("ISE has stalled before retrieving k high-confidence tuples")
+                print(f"============= ALL RELATIONS for {possible_relations[relation][0]} ({len(extracted_tuples)}) =============")
+                for res in sorted_extracted_tuples:
+                    print(f"Confidence: {res[1]}          | Subject: {res[0][0]}       | Object: {res[0][1]}")
                 break
+        print(f"============= ALL RELATIONS for {possible_relations[relation][0]} ({len(extracted_tuples)}) =============")
+        for res in sorted_extracted_tuples:
+            print(f"Confidence: {res[1]}          | Subject: {res[0][0]}       | Object: {res[0][1]}")
                           
         iterations+=1
     print(f"Total # of iterations = {iterations+1}")
