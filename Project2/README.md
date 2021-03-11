@@ -1,4 +1,4 @@
-# SpanBERT for Relation Extraction from Web Documents
+# Information Retrieval using ISE
 By Justin Kim(jyk2149) and Mavis Athene U Chen(mu2288)
 
 ## Files in Submission
@@ -26,6 +26,7 @@ python3 extract.py AIzaSyC6uXsEBblG4JwiO7X25rG5RDUdQrOmrkc db7c825fd9c7885a2 4 .
 
 ## Internal Design
 
+All our code is in `extract.py`. We have one `main` function and 3 other helper functions: `get_query`, `to_plaintext`, `annotate`. In `main` we have our the core logic of ISE: a while loop that keeps track of the number of iterations, a call to `get_query` to get the top 10 web results using [Google Custom Search API](https://developers.google.com/custom-search/), a call to `to_plaintext` to extract actual plain text from a given webpage using [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), a call to `annotate` which uses the [spaCy](https://spacy.io/) library to process and annotate text through linguistic analysis and [SpanBERT](https://github.com/gkaramanolakis/SpanBERT) classifier to extract the specified relations from text documents. At a high level overview, steps 1-2 and steps 4-6 are implemented in `main` and `get_query` and step 3 is implemented in `to_plaintext` and `annotate`.
 
 ## Description of "Step 3"
 
