@@ -41,6 +41,7 @@ def to_plaintext(url):
     except:
         return ""
     print(len(text))
+    
     return text[:20000]
 
 
@@ -77,7 +78,7 @@ def annotate(text, relationship, threshold):
         if len(candidate_pairs) == 0:
             index +=1
             continue
-            
+
         relation_preds = spanbert.predict(candidate_pairs)  # get predictions: list of (relation, confidence) pairs
         for ex, pred in list(zip(candidate_pairs, relation_preds)):
             r = pred[0]

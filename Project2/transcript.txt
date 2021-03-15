@@ -1,0 +1,520 @@
+Loading pre-trained spanBERT from ./pretrained_spanbert
+-----
+Parameters:
+Client Key     = AIzaSyC6uXsEBblG4JwiO7X25rG5RDUdQrOmrkc
+Engine Key     = db7c825fd9c7885a2
+Relation       = per:employee_of
+Threshold      = 0.7
+Query          = bill gates microsoft
+# of Tuples    = 10
+Loading necessary libraries; This should take a minute or so ...
+=========== Iteration: 0 - Query: bill gates microsoft ===========
+URL ( 1 / 10): https://en.wikipedia.org/wiki/Bill_Gates
+	Fetching text from url ...
+102596
+	Webpage length (num characters): 20000
+	Annotating the webpage using spacy...
+	Extracted 96 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+		=== Extracted Relation ===
+		Sentence: Bill Gates From Wikipedia, the free encyclopedia Jump to navigation Jump to search This article is about the co-founder of Microsoft.
+		Confidence: 0.9960805177688599; Subject: Bill Gates; Object: Microsoft
+		Adding to the set of extracted relations
+		==========
+	Processed 5 / 96 sentences
+		=== Extracted Relation ===
+		Sentence: Title Co- chairman and co-founder of the Bill & Melinda Gates Foundation Chairman and founder of Branded Entertainment Network Chairman and co-founder of TerraPower Chairman and founder of Cascade Investment Technology advisor of Microsoft Spouse(s)
+		Confidence: 0.9470030665397644; Subject: Spouse(s; Object: the Bill & Melinda Gates Foundation
+		Adding to the set of extracted relations
+		==========
+	Processed 10 / 96 sentences
+		=== Extracted Relation ===
+		Sentence: He stepped down as chairman of Microsoft in February 2014 and assumed a new post as technology adviser to support the newly appointed CEO Satya Nadella .
+		Confidence: 0.9969852566719055; Subject: Satya Nadella; Object: Microsoft
+		Adding to the set of extracted relations
+		==========
+	Processed 15 / 96 sentences
+		=== Extracted Relation ===
+		Sentence: In March 2020, Gates left his board positions at Microsoft and Berkshire Hathaway to focus on his philanthropic endeavors including climate change , global health and development, and education.
+		Confidence: 0.9947163462638855; Subject: Gates; Object: Microsoft
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: In March 2020, Gates left his board positions at Microsoft and Berkshire Hathaway to focus on his philanthropic endeavors including climate change , global health and development, and education.
+		Confidence: 0.6004084348678589; Subject: Berkshire Hathaway; Object: Microsoft
+		Confidence is lower than threshold confidence. Ignoring this.
+		==========
+		=== Extracted Relation ===
+		Sentence: In October 2017, he was surpassed by Amazon founder and CEO Jeff Bezos , who had an estimated net worth of US$90.6 billion compared to Gates's net worth of US$89.9 billion at the time.
+		Confidence: 0.9970470070838928; Subject: Jeff Bezos; Object: Amazon
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: In October 2017, he was surpassed by Amazon founder and CEO Jeff Bezos , who had an estimated net worth of US$90.6 billion compared to Gates's net worth of US$89.9 billion at the time.
+		Confidence: 0.9929003715515137; Subject: Jeff Bezos; Object: Gates
+		Adding to the set of extracted relations
+		==========
+	Processed 20 / 96 sentences
+	Processed 25 / 96 sentences
+	Processed 30 / 96 sentences
+	Processed 35 / 96 sentences
+	Processed 40 / 96 sentences
+		=== Extracted Relation ===
+		Sentence: Gates left Harvard after two years while Ballmer stayed and graduated magna cum laude .
+		Confidence: 0.6604017019271851; Subject: Ballmer; Object: Harvard
+		Confidence is lower than threshold confidence. Ignoring this.
+		==========
+	Processed 45 / 96 sentences
+		=== Extracted Relation ===
+		Sentence: Years later, Ballmer succeeded Gates as Microsoft's CEO and maintained that position from 2000 until his resignation in 2014.
+		Confidence: 0.9955676198005676; Subject: Ballmer; Object: Microsoft
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: His solution was formalized and published in collaboration with Harvard computer scientist Christos Papadimitriou .
+		Confidence: 0.4978393316268921; Subject: Christos Papadimitriou; Object: Harvard
+		Confidence is lower than threshold confidence. Ignoring this.
+		==========
+	Processed 50 / 96 sentences
+		=== Extracted Relation ===
+		Sentence: MITS hired Allen, and Gates took a leave of absence from Harvard to work with him at MITS in November 1975.
+		Confidence: 0.8534361720085144; Subject: Allen; Object: Harvard
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: MITS hired Allen, and Gates took a leave of absence from Harvard to work with him at MITS in November 1975.
+		Confidence: 0.9398190379142761; Subject: Allen; Object: MITS
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: MITS hired Allen, and Gates took a leave of absence from Harvard to work with him at MITS in November 1975.
+		Confidence: 0.6641742587089539; Subject: Gates; Object: Harvard
+		Confidence is lower than threshold confidence. Ignoring this.
+		==========
+		=== Extracted Relation ===
+		Sentence: MITS hired Allen, and Gates took a leave of absence from Harvard to work with him at MITS in November 1975.
+		Confidence: 0.8046422004699707; Subject: Gates; Object: MITS
+		Adding to the set of extracted relations
+		==========
+	Processed 55 / 96 sentences
+	Processed 60 / 96 sentences
+	Processed 65 / 96 sentences
+		=== Extracted Relation ===
+		Sentence: IBM representative Jack Sams mentioned the licensing difficulties during a subsequent meeting with Gates and asked if Microsoft could provide an operating system.
+		Confidence: 0.9038960933685303; Subject: Jack Sams; Object: IBM
+		Adding to the set of extracted relations
+		==========
+	Processed 70 / 96 sentences
+	Processed 75 / 96 sentences
+	Processed 80 / 96 sentences
+	Processed 85 / 96 sentences
+	Processed 90 / 96 sentences
+		=== Extracted Relation ===
+		Sentence: On February 4, 2014, Gates stepped down as chairman of Microsoft to become "technology advisor" alongside CEO Satya Nadella .
+		Confidence: 0.993299126625061; Subject: Satya Nadella; Object: Gates
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: On February 4, 2014, Gates stepped down as chairman of Microsoft to become "technology advisor" alongside CEO Satya Nadella .
+		Confidence: 0.9956123232841492; Subject: Satya Nadella; Object: Microsoft
+Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+	Processed 95 / 96 sentences
+Extracted annotations for  9  out of total  96  sentences
+Relations extracted from this website: 12 (Overall: 17)
+URL ( 2 / 10): https://www.gatesnotes.com/
+	Fetching text from url ...
+137
+	Webpage length (num characters): 137
+	Annotating the webpage using spacy...
+	Extracted 0 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+Extracted annotations for  0  out of total  0  sentences
+Relations extracted from this website: 0 (Overall: 0)
+URL ( 3 / 10): https://twitter.com/billgates?lang=en
+	Fetching text from url ...
+331
+	Webpage length (num characters): 331
+	Annotating the webpage using spacy...
+	Extracted 1 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+Extracted annotations for  0  out of total  1  sentences
+Relations extracted from this website: 0 (Overall: 0)
+URL ( 4 / 10): https://news.microsoft.com/2020/03/13/microsoft-announces-change-to-its-board-of-directors/
+	Fetching text from url ...
+19
+	Webpage length (num characters): 19
+	Annotating the webpage using spacy...
+	Extracted 0 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+Extracted annotations for  0  out of total  0  sentences
+Relations extracted from this website: 0 (Overall: 0)
+URL ( 5 / 10): https://www.nytimes.com/2020/03/13/technology/bill-gates-microsoft-board.html
+	Fetching text from url ...
+5172
+	Webpage length (num characters): 5172
+	Annotating the webpage using spacy...
+	Extracted 28 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+		=== Extracted Relation ===
+		Sentence: Calla Kessler/The New York Times By Daisuke Wakabayashi and Steve Lohr Published March 13, 2020
+		Confidence: 0.6151880025863647; Subject: Calla Kessler; Object: The New York Times
+		Confidence is lower than threshold confidence. Ignoring this.
+		==========
+		=== Extracted Relation ===
+		Sentence: Updated March 15, 2020 SAN FRANCISCO Bill Gates is stepping down from the board of Microsoft, the software giant he helped found more than four decades ago.
+		Confidence: 0.9965413212776184; Subject: Bill Gates; Object: Microsoft
+		Adding to the set of extracted relations
+		==========
+	Processed 5 / 28 sentences
+		=== Extracted Relation ===
+		Sentence: I have made the decision to step down from both of the public boards on which I serve Microsoft and Berkshire Hathaway to dedicate more time to philanthropic priorities including global health and development, education, and my increasing engagement in tackling climate change, Mr. Gates wrote in a LinkedIn post .
+		Confidence: 0.7470791935920715; Subject: Berkshire Hathaway; Object: Microsoft
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: Microsoft said Mr. Gates would remain a technical adviser to the company.
+		Confidence: 0.9753539562225342; Subject: Gates; Object: Microsoft
+Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+	Processed 10 / 28 sentences
+		=== Extracted Relation ===
+		Sentence: Mr. Gates remains one of the largest individual shareholders of Microsoft.
+		Confidence: 0.9486364722251892; Subject: Gates; Object: Microsoft
+Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+		=== Extracted Relation ===
+		Sentence: He said he would remain active at the company and would work closely with Satya Nadella, Microsofts chief executive.
+		Confidence: 0.9896974563598633; Subject: Satya Nadella; Object: Microsofts
+		Adding to the set of extracted relations
+		==========
+	Processed 15 / 28 sentences
+		=== Extracted Relation ===
+		Sentence: Mr. Gates joined the Berkshire Hathaway board in 2004.
+		Confidence: 0.9972770810127258; Subject: Gates; Object: Berkshire Hathaway
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: The conglomerate has nominated Kenneth Chenault, the former chief executive of American Express, to replace Mr. Gates on the board.
+		Confidence: 0.9970526695251465; Subject: Gates; Object: American Express
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: Daniel Ives, managing director of equity research at Wedbush Securities, said in a research note that Mr. Gatess stepping down from the Microsoft board was not a surprise and that it was a vote of confidence for Mr. Nadella and the direction of the company.
+		Confidence: 0.9885230660438538; Subject: Daniel Ives; Object: Wedbush Securities
+		Adding to the set of extracted relations
+		==========
+	Processed 20 / 28 sentences
+		=== Extracted Relation ===
+		Sentence: Mr. Gates founded Microsoft in 1975, dropping out of Harvard and joining Paul Allen, his friend and technology collaborator since their teenage years at a private high school in Seattle.
+		Confidence: 0.9901818633079529; Subject: Gates; Object: Microsoft
+Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+		=== Extracted Relation ===
+		Sentence: Mr. Gates founded Microsoft in 1975, dropping out of Harvard and joining Paul Allen, his friend and technology collaborator since their teenage years at a private high school in Seattle.
+		Confidence: 0.5143632888793945; Subject: Gates; Object: Harvard
+		Confidence is lower than threshold confidence. Ignoring this.
+		==========
+	Processed 25 / 28 sentences
+Extracted annotations for  9  out of total  28  sentences
+Relations extracted from this website: 6 (Overall: 11)
+URL ( 6 / 10): https://www.britannica.com/biography/Bill-Gates
+	Fetching text from url ...
+11382
+	Webpage length (num characters): 11382
+	Annotating the webpage using spacy...
+	Extracted 46 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Processed 5 / 46 sentences
+		=== Extracted Relation ===
+		Sentence: Bill Gates - Student Encyclopedia (Ages 11 and up) WRITTEN BY The Editors of Encyclopaedia Britannica Encyclopaedia Britannica's editors oversee subject areas in which they have extensive knowledge, whether from years of experience gained by working on that content or via study for an advanced degree....
+		Confidence: 0.5458794832229614; Subject: Bill Gates - Student Encyclopedia; Object: Britannica
+		Confidence is lower than threshold confidence. Ignoring this.
+		==========
+		=== Extracted Relation ===
+		Sentence: Title: William Henry Gates III Bill Gates , in full William Henry Gates III , (born October 28, 1955, Seattle , Washington , U.S.), American computer programmer and entrepreneur who cofounded Microsoft Corporation , the worlds largest personal-computer software company.
+		Confidence: 0.9910613298416138; Subject: William Henry Gates III; Object: Microsoft Corporation
+		Adding to the set of extracted relations
+		==========
+	Processed 10 / 46 sentences
+		=== Extracted Relation ===
+		Sentence: Bill Gates cofounded Microsoft Corporation , the worlds largest personal-computer software company.
+		Confidence: 0.9180271029472351; Subject: Bill Gates; Object: Microsoft Corporation
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: Bill Gates founded the software company Microsoft Corporation with his friend Paul Allen .
+		Confidence: 0.9868191480636597; Subject: Bill Gates; Object: Microsoft Corporation
+		Adding to the set of extracted relations
+		==========
+	Processed 15 / 46 sentences
+	Processed 20 / 46 sentences
+	Processed 25 / 46 sentences
+	Processed 30 / 46 sentences
+		=== Extracted Relation ===
+		Sentence: After a short transition period, Gates relinquished day-to-day oversight of Microsoft in June 2008although he remained chairman of the boardin order to devote more time to the Bill & Melinda Gates Foundation.
+		Confidence: 0.9901326894760132; Subject: Gates; Object: Microsoft
+Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+		=== Extracted Relation ===
+		Sentence: After a short transition period, Gates relinquished day-to-day oversight of Microsoft in June 2008although he remained chairman of the boardin order to devote more time to the Bill & Melinda Gates Foundation.
+		Confidence: 0.9942278861999512; Subject: Gates; Object: the Bill & Melinda Gates Foundation
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: PRNewsFoto/Waggener Edstrom/AP Images Bill and Melinda Gates Bill and Melinda Gates, 2009.
+		Confidence: 0.7967241406440735; Subject: Melinda Gates Bill; Object: PRNewsFoto/
+		Adding to the set of extracted relations
+		==========
+	Processed 35 / 46 sentences
+		=== Extracted Relation ===
+		Sentence: J Allard and Bill Gates Microsoft corporate vice president J Allard (left) and chairman Bill Gates unveiling the company's latest Zune media players.
+		Confidence: 0.9960463047027588; Subject: J Allard; Object: Microsoft
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: J Allard and Bill Gates Microsoft corporate vice president J Allard (left) and chairman Bill Gates unveiling the company's latest Zune media players.
+		Confidence: 0.9927119612693787; Subject: J Allard; Object: Zune
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: J Allard and Bill Gates Microsoft corporate vice president J Allard (left) and chairman Bill Gates unveiling the company's latest Zune media players.
+		Confidence: 0.9333575367927551; Subject: Bill Gates; Object: Zune
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: J Allard and Bill Gates Microsoft corporate vice president J Allard (left) and chairman Bill Gates unveiling the company's latest Zune media players.
+		Confidence: 0.9958391785621643; Subject: J Allard; Object: Microsoft
+Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+		=== Extracted Relation ===
+		Sentence: J Allard and Bill Gates Microsoft corporate vice president J Allard (left) and chairman Bill Gates unveiling the company's latest Zune media players.
+		Confidence: 0.9964738488197327; Subject: Bill Gates; Object: Microsoft
+Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+		=== Extracted Relation ===
+		Sentence: J Allard and Bill Gates Microsoft corporate vice president J Allard (left) and chairman Bill Gates unveiling the company's latest Zune media players.
+		Confidence: 0.9957290887832642; Subject: J Allard; Object: Zune
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: J Allard and Bill Gates Microsoft corporate vice president J Allard (left) and chairman Bill Gates unveiling the company's latest Zune media players.
+		Confidence: 0.9959503412246704; Subject: Bill Gates; Object: Zune
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: Shortly afterward, Gates and Allen founded Microsoft, deriving the name from the words microcomputer and software .
+		Confidence: 0.9828997850418091; Subject: Gates; Object: Microsoft
+Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+		=== Extracted Relation ===
+		Sentence: Shortly afterward, Gates and Allen founded Microsoft, deriving the name from the words microcomputer and software .
+		Confidence: 0.9596613645553589; Subject: Allen; Object: Microsoft
+		Adding to the set of extracted relations
+		==========
+	Processed 40 / 46 sentences
+		=== Extracted Relation ===
+		Sentence: piracy: From hackers to pirates Similarly, Bill Gates , cofounder of the Microsoft Corporation, in 1998 during a candid moment in front of an audience at the University of Washington acknowledged the problem with enforcing software copyrights in the developing world: History at your fingertips Sign up here to see what happened On This Day , every day in your inbox!
+		Confidence: 0.9931334257125854; Subject: Bill Gates; Object: the Microsoft Corporation
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: Seattle , Washington awards and honors Presidential Medal of Freedom (2016) founder of Microsoft Corporation Gates Foundation notable family members spouse Melinda Gates did you know?
+		Confidence: 0.9551736116409302; Subject: Melinda Gates; Object: Microsoft Corporation Gates Foundation
+		Adding to the set of extracted relations
+		==========
+	Processed 45 / 46 sentences
+Extracted annotations for  9  out of total  46  sentences
+Relations extracted from this website: 13 (Overall: 18)
+URL ( 7 / 10): https://www.technologyreview.com/2021/02/14/1018296/bill-gates-climate-change-beef-trees-microsoft/
+	Fetching text from url ...
+15190
+	Webpage length (num characters): 15190
+	Annotating the webpage using spacy...
+	Extracted 11 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+		=== Extracted Relation ===
+		Sentence: The Microsoft cofounder, who is now cochair of the Bill and Melinda Gates Foundation and chair of the investment fund Breakthrough Energy Ventures , sticks to his past argument that well need numerous energy breakthroughs to have any hope of cleaning up all parts of the economy and the poorest parts of the world.
+		Confidence: 0.9827732443809509; Subject: Bill; Object: Microsoft
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: The Microsoft cofounder, who is now cochair of the Bill and Melinda Gates Foundation and chair of the investment fund Breakthrough Energy Ventures , sticks to his past argument that well need numerous energy breakthroughs to have any hope of cleaning up all parts of the economy and the poorest parts of the world.
+		Confidence: 0.9925454258918762; Subject: Bill; Object: Melinda Gates Foundation
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: The Microsoft cofounder, who is now cochair of the Bill and Melinda Gates Foundation and chair of the investment fund Breakthrough Energy Ventures , sticks to his past argument that well need numerous energy breakthroughs to have any hope of cleaning up all parts of the economy and the poorest parts of the world.
+		Confidence: 0.9930869936943054; Subject: Bill; Object: Breakthrough Energy Ventures
+		Adding to the set of extracted relations
+		==========
+	Processed 5 / 11 sentences
+	Processed 10 / 11 sentences
+Extracted annotations for  1  out of total  11  sentences
+Relations extracted from this website: 3 (Overall: 3)
+URL ( 8 / 10): https://www.linkedin.com/in/williamhgates
+	Fetching text from url ...
+0
+Unable to fetch text from URL. Continuing
+URL ( 9 / 10): https://www.forbes.com/profile/bill-gates/
+	Fetching text from url ...
+7088
+	Webpage length (num characters): 7088
+	Annotating the webpage using spacy...
+	Extracted 32 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Processed 5 / 32 sentences
+		=== Extracted Relation ===
+		Sentence: In mid-March 2020, Gates stepped down as a board member of Microsoft, the software firm he founded with Paul Allen (d. 2018) in 1975.
+		Confidence: 0.9928881525993347; Subject: Paul Allen; Object: Gates
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: In mid-March 2020, Gates stepped down as a board member of Microsoft, the software firm he founded with Paul Allen (d. 2018) in 1975.
+		Confidence: 0.9940060377120972; Subject: Paul Allen; Object: Microsoft
+		Adding to the set of extracted relations
+		==========
+	Processed 10 / 32 sentences
+	Processed 15 / 32 sentences
+		=== Extracted Relation ===
+		Sentence: And Bill Gates This PC has over $15,000 worth of diamonds inside By Antony Leather Senior Contributor Feb 26, 2021 Bill Gates Issues Serious Bitcoin Warning As Tesla Billionaire Elon Musk Stokes Crypto Price Mania Billionaires from Microsoft founder-turned global philanthropist Bill Gates to Tesla chief executive Elon Musk are weighing in on bitcoin...
+		Confidence: 0.8975712656974792; Subject: Elon Musk; Object: Tesla
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: By Billy Bambrough Contributor Feb 26, 2021 Android Circuit: Nokias Missing Flagship, Surprising OnePlus 9 Decision, Bill Gates Favorite Phone
+		Confidence: 0.6625244617462158; Subject: Billy Bambrough; Object: Android Circuit
+		Confidence is lower than threshold confidence. Ignoring this.
+		==========
+	Processed 20 / 32 sentences
+	Processed 25 / 32 sentences
+		=== Extracted Relation ===
+		Sentence: For When Youre Old And Stupid, Steven Sinofsky Recalls Bill Gates told potential Microsoft recruits that working in government is for when youre old and stupid, a former Microsoft executive reveals.
+		Confidence: 0.8732959032058716; Subject: Steven Sinofsky; Object: Microsoft
+		Adding to the set of extracted relations
+		==========
+	Processed 30 / 32 sentences
+Extracted annotations for  3  out of total  32  sentences
+Relations extracted from this website: 4 (Overall: 5)
+URL ( 10 / 10): https://www.biography.com/business-figure/bill-gates
+	Fetching text from url ...
+30939
+	Webpage length (num characters): 20000
+	Annotating the webpage using spacy...
+	Extracted 78 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+		=== Extracted Relation ===
+		Sentence: In 2014, Gates stepped down as Microsoft's chairman to focus on charitable work at his foundation, the Bill and Melinda Gates Foundation.
+		Confidence: 0.9846269488334656; Subject: Bill; Object: Gates
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: In 2014, Gates stepped down as Microsoft's chairman to focus on charitable work at his foundation, the Bill and Melinda Gates Foundation.
+		Confidence: 0.926010251045227; Subject: Bill; Object: Microsoft
+Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+	Processed 5 / 78 sentences
+		=== Extracted Relation ===
+		Sentence: Updated: Apr 8, 2020 Original: Mar 15, 2018 Entrepreneur Bill Gates founded the world's largest software business, Microsoft, with Paul Allen, and subsequently became one of the richest men in the world.
+		Confidence: 0.966817319393158; Subject: Bill Gates; Object: Microsoft
+Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+		=== Extracted Relation ===
+		Sentence: Entrepreneur and businessman Bill Gates and his business partner Paul Allen founded and built the world's largest software business, Microsoft, through technological innovation, keen business strategy and aggressive business tactics.
+		Confidence: 0.9921194911003113; Subject: Bill Gates; Object: Microsoft
+Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+		=== Extracted Relation ===
+		Sentence: In February 2014, Gates announced that he was stepping down as Microsoft's chairman to focus on charitable work at his foundation, the Bill and Melinda Gates Foundation .
+		Confidence: 0.9834116697311401; Subject: Bill; Object: Gates
+Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+		=== Extracted Relation ===
+		Sentence: In February 2014, Gates announced that he was stepping down as Microsoft's chairman to focus on charitable work at his foundation, the Bill and Melinda Gates Foundation .
+		Confidence: 0.5456397533416748; Subject: Bill; Object: Microsoft
+		Confidence is lower than threshold confidence. Ignoring this.
+		==========
+	Processed 10 / 78 sentences
+	Processed 15 / 78 sentences
+	Processed 20 / 78 sentences
+		=== Extracted Relation ===
+		Sentence: After attending college for two years, Allen dropped out and moved to Boston, Massachusetts, to work for Honeywell.
+		Confidence: 0.9945504069328308; Subject: Allen; Object: Honeywell
+		Adding to the set of extracted relations
+		==========
+	Processed 25 / 78 sentences
+	Processed 30 / 78 sentences
+		=== Extracted Relation ===
+		Sentence: Allen was hired at MITS, and Gates soon left Harvard to work with him.
+		Confidence: 0.9798140525817871; Subject: Allen; Object: Gates
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: Allen was hired at MITS, and Gates soon left Harvard to work with him.
+		Confidence: 0.9953853487968445; Subject: Allen; Object: Harvard
+		Adding to the set of extracted relations
+		==========
+	Processed 35 / 78 sentences
+		=== Extracted Relation ===
+		Sentence: Bill Gates and Founding Microsoft In 1975, Gates and Allen formed Micro-Soft, a blend of "micro-computer" and "software" (they dropped the hyphen within a year).
+		Confidence: 0.9687933325767517; Subject: Bill Gates; Object: Micro-Soft
+		Adding to the set of extracted relations
+		==========
+		=== Extracted Relation ===
+		Sentence: Bill Gates and Founding Microsoft In 1975, Gates and Allen formed Micro-Soft, a blend of "micro-computer" and "software" (they dropped the hyphen within a year).
+		Confidence: 0.8800498843193054; Subject: Allen; Object: Micro-Soft
+		Adding to the set of extracted relations
+		==========
+	Processed 40 / 78 sentences
+	Processed 45 / 78 sentences
+		=== Extracted Relation ===
+		Sentence: Mary was highly respected and well connected with her membership on several corporate boards, including IBM's.
+		Confidence: 0.9843528270721436; Subject: Mary; Object: IBM
+		Adding to the set of extracted relations
+		==========
+	Processed 50 / 78 sentences
+	Processed 55 / 78 sentences
+		=== Extracted Relation ===
+		Sentence: In mid-1981, Gates and Allen incorporated Microsoft, and Gates was appointed president and chairman of the board.
+		Confidence: 0.9513516426086426; Subject: Allen; Object: Gates
+Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+	Processed 60 / 78 sentences
+	Processed 65 / 78 sentences
+	Processed 70 / 78 sentences
+	Processed 75 / 78 sentences
+Extracted annotations for  9  out of total  78  sentences
+Relations extracted from this website: 7 (Overall: 13)
+============= ALL RELATIONS for per:employee_of (40) =============
+Confidence: 0.9972770810127258          | Subject: Gates       | Object: Berkshire Hathaway
+Confidence: 0.9970526695251465          | Subject: Gates       | Object: American Express
+Confidence: 0.9970470070838928          | Subject: Jeff Bezos       | Object: Amazon
+Confidence: 0.9969852566719055          | Subject: Satya Nadella       | Object: Microsoft
+Confidence: 0.9965413212776184          | Subject: Bill Gates       | Object: Microsoft
+Confidence: 0.9960463047027588          | Subject: J Allard       | Object: Microsoft
+Confidence: 0.9959503412246704          | Subject: Bill Gates       | Object: Zune
+Confidence: 0.9957290887832642          | Subject: J Allard       | Object: Zune
+Confidence: 0.9955676198005676          | Subject: Ballmer       | Object: Microsoft
+Confidence: 0.9953853487968445          | Subject: Allen       | Object: Harvard
+Confidence: 0.9947163462638855          | Subject: Gates       | Object: Microsoft
+Confidence: 0.9945504069328308          | Subject: Allen       | Object: Honeywell
+Confidence: 0.9942278861999512          | Subject: Gates       | Object: the Bill & Melinda Gates Foundation
+Confidence: 0.9940060377120972          | Subject: Paul Allen       | Object: Microsoft
+Confidence: 0.993299126625061          | Subject: Satya Nadella       | Object: Gates
+Confidence: 0.9931334257125854          | Subject: Bill Gates       | Object: the Microsoft Corporation
+Confidence: 0.9930869936943054          | Subject: Bill       | Object: Breakthrough Energy Ventures
+Confidence: 0.9929003715515137          | Subject: Jeff Bezos       | Object: Gates
+Confidence: 0.9928881525993347          | Subject: Paul Allen       | Object: Gates
+Confidence: 0.9925454258918762          | Subject: Bill       | Object: Melinda Gates Foundation
+Confidence: 0.9910613298416138          | Subject: William Henry Gates III       | Object: Microsoft Corporation
+Confidence: 0.9896974563598633          | Subject: Satya Nadella       | Object: Microsofts
+Confidence: 0.9885230660438538          | Subject: Daniel Ives       | Object: Wedbush Securities
+Confidence: 0.9868191480636597          | Subject: Bill Gates       | Object: Microsoft Corporation
+Confidence: 0.9846269488334656          | Subject: Bill       | Object: Gates
+Confidence: 0.9843528270721436          | Subject: Mary       | Object: IBM
+Confidence: 0.9827732443809509          | Subject: Bill       | Object: Microsoft
+Confidence: 0.9798140525817871          | Subject: Allen       | Object: Gates
+Confidence: 0.9687933325767517          | Subject: Bill Gates       | Object: Micro-Soft
+Confidence: 0.9596613645553589          | Subject: Allen       | Object: Microsoft
+Confidence: 0.9551736116409302          | Subject: Melinda Gates       | Object: Microsoft Corporation Gates Foundation
+Confidence: 0.9470030665397644          | Subject: Spouse(s       | Object: the Bill & Melinda Gates Foundation
+Confidence: 0.9398190379142761          | Subject: Allen       | Object: MITS
+Confidence: 0.9038960933685303          | Subject: Jack Sams       | Object: IBM
+Confidence: 0.8975712656974792          | Subject: Elon Musk       | Object: Tesla
+Confidence: 0.8800498843193054          | Subject: Allen       | Object: Micro-Soft
+Confidence: 0.8732959032058716          | Subject: Steven Sinofsky       | Object: Microsoft
+Confidence: 0.8046422004699707          | Subject: Gates       | Object: MITS
+Confidence: 0.7967241406440735          | Subject: Melinda Gates Bill       | Object: PRNewsFoto/
+Confidence: 0.7470791935920715          | Subject: Berkshire Hathaway       | Object: Microsoft
+Total # of iterations = 1
