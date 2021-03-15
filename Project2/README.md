@@ -10,20 +10,24 @@ By Justin Kim(jyk2149) and Mavis Athene U Chen(mu2288)
 
 ## How to Run
 0. Make sure you have BeautifulSoup, Spacy, and the en_core_web_lg installed 
+   ```bash
     pip3 install beautifulsoup4
     pip3 install -U pip setuptools wheel
     pip3 install -U spacy
     python3 -m spacy download en_core_web_lg
+```
 
 1. Unzip the proj2.tar.gz:
-    tar -zxf proj2.tar.gz
+    `tar -zxf proj2.tar.gz`
 
 2. Move into the proj2 folder:
+```bash
     cd proj2
     bash install.sh
+```
 
 3. Run extract.py:
-    python3 extract.py <google api key> <google engine id> <r> <t> <q> <k>
+    `python3 extract.py <google api key> <google engine id> <r> <t> <q> <k>`
 
 
 
