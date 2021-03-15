@@ -9,8 +9,9 @@ By Justin Kim(jyk2149) and Mavis Athene U Chen(mu2288)
 - README.md
 
 ## How to Run
-0. Make sure you have BeautifulSoup, Spacy, and the en_core_web_lg installed 
+0. Make sure you have Google API Client, BeautifulSoup, Spacy, and the en_core_web_lg installed 
 ```bash
+    pip3 install google-api-python-client 
     pip3 install beautifulsoup4
     pip3 install -U pip setuptools wheel
     pip3 install -U spacy
