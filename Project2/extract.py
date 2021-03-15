@@ -1,6 +1,7 @@
 import sys
+import re
 import requests
-import html
+import unicodedata
 from bs4 import BeautifulSoup
 from googleapiclient.discovery import build
 from spanbert import SpanBERT
@@ -31,11 +32,12 @@ def get_query(api_key, engine_key, query):
 def to_plaintext(url):
     print("\tFetching text from url ...")
     try:
-        res = requests.get(url,timeout=0.5)
-        html_page = res.text
+        res = requests.get(url,timeout=5)
+        html_page = res.text.encode('ascii','ignore')
         soup = BeautifulSoup(html_page, 'html.parser')
-        [s.decompose() for s in (soup(['img','script','head','ul','li','ol','nav','form']))]
+        [s.decompose() for s in (soup(['img','script','head','nav','form','sup']))]
         text = soup.get_text(strip=True, separator=' ').replace("\n", "").replace("\t", "").replace("  ", ' ')
+        text = unicodedata.normalize("NFKD",text)
     except:
         return ""
     print(len(text))
@@ -75,6 +77,7 @@ def annotate(text, relationship, threshold):
         if len(candidate_pairs) == 0:
             index +=1
             continue
+            
         relation_preds = spanbert.predict(candidate_pairs)  # get predictions: list of (relation, confidence) pairs
         for ex, pred in list(zip(candidate_pairs, relation_preds)):
             r = pred[0]
