@@ -10,7 +10,7 @@ By Justin Kim(jyk2149) and Mavis Athene U Chen(mu2288)
 
 ## How to Run
 0. Make sure you have BeautifulSoup, Spacy, and the en_core_web_lg installed 
-   ```bash
+```bash
     pip3 install beautifulsoup4
     pip3 install -U pip setuptools wheel
     pip3 install -U spacy
