@@ -18,8 +18,9 @@ By Justin Kim(jyk2149) and Mavis Athene U Chen(mu2288)
 ```
 
 1. Unzip the proj2.tar.gz:
-    `tar -zxf proj2.tar.gz`
-
+```bash
+    tar -zxf proj2.tar.gz
+```
 2. Move into the proj2 folder:
 ```bash
     cd proj2
@@ -27,14 +28,8 @@ By Justin Kim(jyk2149) and Mavis Athene U Chen(mu2288)
 ```
 
 3. Run extract.py:
-    `python3 extract.py <google api key> <google engine id> <r> <t> <q> <k>`
-
-
-
-
-
 ```bash
-python3 extract.py <google api key> <google engine id> <r> <t> <q> <k>
+    python3 extract.py <google api key> <google engine id> <r> <t> <q> <k>
 ```
 
 Google API KEY: AIzaSyC6uXsEBblG4JwiO7X25rG5RDUdQrOmrkc
