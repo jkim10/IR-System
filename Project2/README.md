@@ -32,14 +32,15 @@ By Justin Kim(jyk2149) and Mavis Athene U Chen(mu2288)
 ```bash
 python3 extract.py <google api key> <google engine id> <r> <t> <q> <k>
 ```
+
 Google API KEY: AIzaSyC6uXsEBblG4JwiO7X25rG5RDUdQrOmrkc
 
 Google Search Engine ID: db7c825fd9c7885a2
 
-Sample Run with Above API Key and Engine Key:
+Sample run for the transcript:
 
 ```bash
-python3 extract.py AIzaSyC6uXsEBblG4JwiO7X25rG5RDUdQrOmrkc db7c825fd9c7885a2 4 .7 "bill gates microsoft" 10
+python3 extract.py AIzaSyC6uXsEBblG4JwiO7X25rG5RDUdQrOmrkc db7c825fd9c7885a2 2 .7 "bill gates microsoft" 10
 ```
 
 
