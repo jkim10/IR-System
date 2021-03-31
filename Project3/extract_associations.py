@@ -34,13 +34,14 @@ if __name__ == "__main__":
         rows = csv.reader(f)
         data = list(rows)
         data = data[1:]
-    
-    # data = [
-    #         ["pen","ink","diary","soap"],
-    #         ["pen","ink","diary"],
-    #         ['pen',"diary"],
-    #         ['pen',"ink","soap"]
-    #        ]
+
+    # Comment this out to use real data    
+    data = [
+            ["pen","ink","diary","soap"],
+            ["pen","ink","diary"],
+            ['pen',"diary"],
+            ['pen',"ink","soap"]
+           ]
     min_sup = float(sys.argv[2])
     min_conf = float(sys.argv[3])
     candidate = set()
