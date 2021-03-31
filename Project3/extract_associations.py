@@ -2,9 +2,12 @@ import sys
 import csv
 from collections import defaultdict
 import itertools
+
+# Going to find all subsets of L_k ustin L_k-1
 def combinations(L,k):
     L_k = [x for x in L if len(x) == k-1]
     return set(itertools.combinations(L, k))
+
 if __name__ == "__main__":
     if(len(sys.argv) < 4):
         print(f"Usage: {sys.argv[0]} <integrated_dataset> <min_sup> <min_conf>")
@@ -13,6 +16,10 @@ if __name__ == "__main__":
         rows = csv.reader(f)
         data = list(rows)
         data = data[1:]
+    
+    data = [
+            []
+           ]
     min_sup = float(sys.argv[2])
     min_conf = float(sys.argv[3])
     candidate = set()
