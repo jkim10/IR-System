@@ -16,6 +16,7 @@ def combinations(L,k):
             temp.add(e)
             temp.add(n)
             if(len(temp) == k):
+                temp = sorted(temp)
                 candidates.add(tuple(temp))
     return candidates
 
@@ -46,6 +47,7 @@ if __name__ == "__main__":
     min_conf = float(sys.argv[3])
     candidate = set()
     L = defaultdict(int)
+    L1 = []
     num_rows = len(data)
     num_columns = len(data[0])
 
@@ -55,6 +57,7 @@ if __name__ == "__main__":
         for x in row:
             if(x != ''):
                 L[(x)] +=1
+                L1.append(x)
     for key in list(L.keys()): # Filter out keys not above min_sup
         s = L[key] / num_rows
         if(s < min_sup):
@@ -78,10 +81,28 @@ if __name__ == "__main__":
     
     # Uncomment when we ready to output
     # out = open("output.txt","w")
-    # out.write(f"==Frequent Itemsets (min_sup={min_sup})\n")
+    print(f"==Frequent Itemsets (min_sup={min_sup*100}%)")
     # # TODO: Print Frequent Itemsets
     for freq in L.keys():
-        print(f"[{freq}], {L[freq] / num_rows}")
+        support = L[freq] / num_rows
+        print(f"[{freq}], {support*100}%")
 
-    # out.write(f"==High-confidence association rules (min_conf={min_conf})\n")
+    print(f"==High-confidence association rules (min_conf={min_conf*100}%)")
     # # TODO: Print High Confidence association rules
+    above_conf = []
+    for freq in L.keys():
+        for n in L1:
+            if(isinstance(freq,tuple)):
+                new_itemset = tuple(sorted(list(freq) + [n]))
+            else:
+                if(n != freq):
+                    new_itemset = tuple(sorted([freq,n]))
+                else:
+                    break
+            if(new_itemset in L):
+                confidence = L[new_itemset] / L[freq]
+                support = L[new_itemset] / num_rows
+                if(confidence > min_conf):
+                    above_conf.append((freq,n,confidence,support))
+    for passed in above_conf:
+        print(f"[{passed[0]}] => [{passed[1]}] (Conf: {passed[2]*100}%, Supp: {passed[3]*100}%)")
