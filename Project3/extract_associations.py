@@ -37,17 +37,17 @@ if __name__ == "__main__":
         data = data[1:]
 
     # Comment this out to use real data    
-    data = [
-            ["pen","ink","diary","soap"],
-            ["pen","ink","diary"],
-            ['pen',"diary"],
-            ['pen',"ink","soap"]
-           ]
+    # data = [
+    #         ["pen","ink","diary","soap"],
+    #         ["pen","ink","diary"],
+    #         ['pen',"diary"],
+    #         ['pen',"ink","soap"]
+    #        ]
     min_sup = float(sys.argv[2])
     min_conf = float(sys.argv[3])
     candidate = set()
     L = defaultdict(int)
-    L1 = []
+    L1 = set()
     num_rows = len(data)
     num_columns = len(data[0])
 
@@ -57,7 +57,7 @@ if __name__ == "__main__":
         for x in row:
             if(x != ''):
                 L[(x)] +=1
-                L1.append(x)
+                L1.add(x)
     for key in list(L.keys()): # Filter out keys not above min_sup
         s = L[key] / num_rows
         if(s < min_sup):
@@ -90,19 +90,21 @@ if __name__ == "__main__":
     print(f"==High-confidence association rules (min_conf={min_conf*100}%)")
     # # TODO: Print High Confidence association rules
     above_conf = []
+    seen = set()
     for freq in L.keys():
         for n in L1:
-            if(isinstance(freq,tuple)):
+            if(type(freq) is tuple):
                 new_itemset = tuple(sorted(list(freq) + [n]))
             else:
                 if(n != freq):
                     new_itemset = tuple(sorted([freq,n]))
                 else:
-                    break
+                    new_itemset = None
             if(new_itemset in L):
                 confidence = L[new_itemset] / L[freq]
                 support = L[new_itemset] / num_rows
                 if(confidence > min_conf):
                     above_conf.append((freq,n,confidence,support))
+
     for passed in above_conf:
         print(f"[{passed[0]}] => [{passed[1]}] (Conf: {passed[2]*100}%, Supp: {passed[3]*100}%)")
