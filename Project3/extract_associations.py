@@ -12,12 +12,9 @@ def combinations(L,k):
 
     for e in L_k:
         for n in L_k:
-            temp = set()
-            temp.add(e)
-            temp.add(n)
+            temp = e.union(n)
             if(len(temp) == k):
-                temp = sorted(temp)
-                candidates.add(tuple(temp))
+                candidates.add(temp)
     return candidates
 
 def subset(C_k, row):
@@ -56,7 +53,7 @@ if __name__ == "__main__":
     for row in data:
         for x in row:
             if(x != ''):
-                L[(x)] +=1
+                L[frozenset([x])] +=1
                 L1.add(x)
     for key in list(L.keys()): # Filter out keys not above min_sup
         s = L[key] / num_rows
@@ -69,6 +66,7 @@ if __name__ == "__main__":
         for row in data: # (line 4 of algorithm)
             C_t = subset(C_k,row)
             for candidate in C_t:
+                candidate = frozenset(candidate)
                 L[candidate] += 1
                 added_candidates.add(candidate)
         for key in added_candidates: # Filter out keys not above min_sup
@@ -85,26 +83,26 @@ if __name__ == "__main__":
     # # TODO: Print Frequent Itemsets
     for freq in L.keys():
         support = L[freq] / num_rows
-        print(f"[{freq}], {support*100}%")
+        print(f"[{','.join(freq)}], {support*100}%")
 
     print(f"==High-confidence association rules (min_conf={min_conf*100}%)")
     # # TODO: Print High Confidence association rules
     above_conf = []
     seen = set()
     for freq in L.keys():
-        for n in L1:
-            if(type(freq) is tuple):
-                new_itemset = tuple(sorted(list(freq) + [n]))
+        if(len(freq) == 1):
+            continue
+        for n in freq:
+            right_hs = frozenset([n])
+            left_hs = freq.difference(right_hs)
+            if(left_hs in seen):
+                continue
             else:
-                if(n != freq):
-                    new_itemset = tuple(sorted([freq,n]))
-                else:
-                    new_itemset = None
-            if(new_itemset in L):
-                confidence = L[new_itemset] / L[freq]
-                support = L[new_itemset] / num_rows
-                if(confidence > min_conf):
-                    above_conf.append((freq,n,confidence,support))
-
+                seen.add(left_hs)
+            confidence = L[freq] / L[left_hs]
+            support = L[freq] / num_rows
+            if(confidence > min_conf):
+                above_conf.append((left_hs,n,confidence,support))
+    above_conf = sorted(above_conf,key=lambda x: x[2],reverse=True)
     for passed in above_conf:
-        print(f"[{passed[0]}] => [{passed[1]}] (Conf: {passed[2]*100}%, Supp: {passed[3]*100}%)")
+        print(f"[{','.join(passed[0])}] => [{passed[1]}] (Conf: {passed[2]*100}%, Supp: {passed[3]*100}%)")
