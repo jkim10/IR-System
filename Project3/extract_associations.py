@@ -69,7 +69,7 @@ if __name__ == "__main__":
 
 
     
-    out = open("output.txt","w")
+    out = open("example-run.txt","w")
     out.write(f"==Frequent Itemsets (min_sup={min_sup*100}%)\n")
     sup_print = []
     for freq in L.keys():

@@ -1,0 +1,437 @@
+==Frequent Itemsets (min_sup=5.0%)
+[Occupant], 56.8%
+[21-50], 50.0%
+[Injured], 50.0%
+[Killed], 50.0%
+[Occupant,Injured], 36.199999999999996%
+[Pedestrian], 35.85%
+[M], 35.099999999999994%
+[Occupant,21-50], 32.9%
+[Not Ejected], 29.45%
+[Injured,21-50], 28.449999999999996%
+[Occupant,Not Ejected], 27.200000000000003%
+[Pedestrian,Killed], 25.900000000000002%
+[Driver], 24.55%
+[51-70], 23.0%
+[Injured,Not Ejected], 22.6%
+[21-50,Killed], 21.55%
+[Occupant,Injured,21-50], 21.3%
+[F], 21.25%
+[Occupant,Injured,Not Ejected], 20.95%
+[Occupant,Driver], 20.65%
+[Occupant,Killed], 20.599999999999998%
+[Occupant,M], 20.5%
+[21-50,M], 18.7%
+[M,Killed], 18.55%
+[Driver,M], 18.3%
+[Driver,Not Ejected], 17.9%
+[Not Ejected,M], 17.65%
+[Head], 17.2%
+[21-50,Not Ejected], 16.8%
+[Injured,M], 16.55%
+[Occupant,Not Ejected,Driver], 16.3%
+[Occupant,Not Ejected,M], 15.75%
+[0-20], 15.55%
+[Occupant,21-50,Not Ejected], 15.5%
+[Lap Belt & Harness], 15.2%
+[Occupant,Driver,M], 15.2%
+[Occupant,Lap Belt & Harness], 15.15%
+[Driver,21-50], 14.799999999999999%
+[Not Ejected,Lap Belt & Harness], 14.75%
+[Occupant,Not Ejected,Lap Belt & Harness], 14.7%
+[Driver,Injured], 14.099999999999998%
+[Injured,21-50,Not Ejected], 14.05%
+[51-70,Killed], 13.850000000000001%
+[Unknown], 13.8%
+[Head,Killed], 13.65%
+[Injured,F], 13.200000000000001%
+[Injured,Lap Belt & Harness], 13.200000000000001%
+[Occupant,Injured,Lap Belt & Harness], 13.15%
+[Injured,Not Ejected,Lap Belt & Harness], 12.9%
+[Occupant,Injured,21-50,Not Ejected], 12.9%
+[Occupant,Injured,Lap Belt & Harness,Not Ejected], 12.85%
+[21-50,Pedestrian], 12.8%
+[Driver,Injured,Not Ejected], 12.65%
+[Driver,Not Ejected,M], 12.65%
+[Occupant,21-50,Driver], 12.55%
+[Occupant,F], 12.5%
+[Internal], 12.35%
+[Occupant,21-50,M], 12.35%
+[Injured,Not Ejected,M], 12.3%
+[Internal,Killed], 12.0%
+[Occupant,Injured,Driver], 11.95%
+[Not Ejected,F], 11.799999999999999%
+[Occupant,21-50,Killed], 11.600000000000001%
+[Occupant,Injured,Driver,Not Ejected], 11.450000000000001%
+[Occupant,Injured,M], 11.450000000000001%
+[Occupant,Not Ejected,F], 11.450000000000001%
+[Occupant,Driver,Not Ejected,M], 11.3%
+[Head,M], 11.25%
+[Driver,21-50,M], 11.1%
+[Complaint of Pain or Nausea], 11.05%
+[Pedestrian,M], 11.0%
+[Occupant,Injured,Not Ejected,M], 10.95%
+[51-70,Pedestrian], 10.85%
+[Driver,21-50,Not Ejected], 10.75%
+[Injured,Complaint of Pain or Nausea], 10.65%
+[Occupant,51-70], 10.6%
+[71-100], 10.549999999999999%
+[Driver,Killed], 10.45%
+[Occupant,Injured,F], 10.35%
+[21-50,F], 10.299999999999999%
+[Injured,Not Ejected,F], 10.299999999999999%
+[21-50,Not Ejected,M], 10.15%
+[Occupant,Injured,Not Ejected,F], 10.0%
+[Injured,Pedestrian], 9.950000000000001%
+[Pedestrian/Bicyclist/Other Pedestrian at Intersection], 9.85%
+[Injured,21-50,M], 9.8%
+[Pedestrian/Bicyclist/Other Pedestrian at Intersection,Pedestrian], 9.8%
+[Injured,0-20], 9.75%
+[Occupant,Driver,21-50,Not Ejected], 9.75%
+[Driver,Lap Belt & Harness], 9.55%
+[Driver,Lap Belt & Harness,Occupant], 9.5%
+[Occupant,0-20], 9.4%
+[Complaint of Pain], 9.35%
+[Killed,Head,M], 9.35%
+[51-70,M], 9.3%
+[Driver,Injured,21-50], 9.3%
+[Driver,Injured,M], 9.25%
+[Occupant,Driver,21-50,M], 9.25%
+[Driver,Lap Belt & Harness,Not Ejected], 9.2%
+[Driver,Occupant,Lap Belt & Harness,Not Ejected], 9.15%
+[Entire Body], 9.15%
+[Injured,51-70], 9.15%
+[Internal,M], 9.15%
+[Occupant,21-50,Not Ejected,M], 9.1%
+[Driver,M,Killed], 9.049999999999999%
+[Occupant,M,Killed], 9.049999999999999%
+[Injured,Complaint of Pain], 8.95%
+[Pedestrian,Head], 8.95%
+[Internal,M,Killed], 8.9%
+[M,21-50,Killed], 8.9%
+[21-50,Lap Belt & Harness], 8.799999999999999%
+[Occupant,21-50,Lap Belt & Harness], 8.799999999999999%
+[Occupant,Driver,Killed], 8.7%
+[Driver,Injured,21-50,Not Ejected], 8.649999999999999%
+[21-50,Not Ejected,Lap Belt & Harness], 8.55%
+[Occupant,21-50,Lap Belt & Harness,Not Ejected], 8.55%
+[Injured,Not Ejected,Complaint of Pain or Nausea], 8.5%
+[Not Ejected,Complaint of Pain or Nausea], 8.5%
+[71-100,Killed], 8.4%
+[Pedestrian,Head,Killed], 8.3%
+[21-50,Pedestrian,Killed], 8.200000000000001%
+[Lap Belt & Harness,M], 8.200000000000001%
+[51-70,Pedestrian,Killed], 8.15%
+[Driver,Injured,Not Ejected,M], 8.15%
+[Occupant,Complaint of Pain or Nausea], 8.15%
+[Occupant,Lap Belt & Harness,M], 8.15%
+[Injured,21-50,Lap Belt & Harness], 8.1%
+[Occupant,Injured,21-50,Lap Belt & Harness], 8.1%
+[Occupant,Injured,Complaint of Pain or Nausea], 8.1%
+[F,Killed], 8.05%
+[Occupant,Injured,Driver,21-50], 8.05%
+[Driver,Injured,Lap Belt & Harness], 7.95%
+[Injured,21-50,Lap Belt & Harness,Not Ejected], 7.95%
+[Injured,Occupant,21-50,Lap Belt & Harness,Not Ejected], 7.95%
+[M,Pedestrian,Killed], 7.95%
+[Occupant,Injured,Complaint of Pain or Nausea,Not Ejected], 7.95%
+[Occupant,Not Ejected,Complaint of Pain or Nausea], 7.95%
+[F,Pedestrian], 7.9%
+[Injured,21-50,Not Ejected,M], 7.9%
+[Lap Belt & Harness,Not Ejected,M], 7.9%
+[Occupant,Injured,Driver,Lap Belt & Harness], 7.9%
+[Occupant,Lap Belt & Harness,Not Ejected,M], 7.85%
+[Pedestrian/Bicyclist/Other Pedestrian Not at Intersection], 7.85%
+[Injured,21-50,F], 7.8%
+[Injured,Occupant,Driver,21-50,Not Ejected], 7.8%
+[Pedestrian,Pedestrian/Bicyclist/Other Pedestrian Not at Intersection], 7.8%
+[Driver,Injured,Lap Belt & Harness,Not Ejected], 7.7%
+[21-50,Head], 7.6499999999999995%
+[Injured,Occupant,Driver,Lap Belt & Harness,Not Ejected], 7.6499999999999995%
+[Occupant,Driver,Killed,M], 7.6499999999999995%
+[Occupant,Injured,Driver,M], 7.55%
+[Driver,21-50,Not Ejected,M], 7.3999999999999995%
+[Bicyclist], 7.35%
+[None], 7.35%
+[Occupant,Injured,0-20], 7.199999999999999%
+[Complaint of Pain,Not Ejected], 7.1499999999999995%
+[Entire Body,Killed], 7.1499999999999995%
+[Injured,M,Occupant,Driver,Not Ejected], 7.1499999999999995%
+[Occupant,Injured,21-50,M], 7.1499999999999995%
+[71-100,Pedestrian], 7.049999999999999%
+[Not Ejected,Unknown], 7.049999999999999%
+[F,Lap Belt & Harness], 7.000000000000001%
+[Occupant,Head], 7.000000000000001%
+[Occupant,Lap Belt & Harness,F], 7.000000000000001%
+[Occupant,Unknown], 7.000000000000001%
+[Injured,Complaint of Pain,Not Ejected], 6.950000000000001%
+[Injured,M,Occupant,21-50,Not Ejected], 6.950000000000001%
+[Occupant,21-50,F], 6.950000000000001%
+[Occupant,Complaint of Pain], 6.9%
+[Not Ejected,F,Lap Belt & Harness], 6.8500000000000005%
+[Not Ejected,Killed], 6.8500000000000005%
+[Occupant,Lap Belt & Harness,Not Ejected,F], 6.8500000000000005%
+[Ejected], 6.75%
+[M,Unknown], 6.75%
+[Occupant,Complaint of Pain,Not Ejected], 6.75%
+[Injured,Lap Belt & Harness,M], 6.7%
+[Occupant,Injured,Complaint of Pain], 6.7%
+[21-50,F,Not Ejected], 6.65%
+[Occupant,Injured,Lap Belt & Harness,M], 6.65%
+[M,Occupant,Driver,21-50,Not Ejected], 6.6000000000000005%
+[Occupant,Injured,Complaint of Pain,Not Ejected], 6.550000000000001%
+[Injured,F,Lap Belt & Harness], 6.5%
+[Injured,Lap Belt & Harness,Not Ejected,M], 6.5%
+[Occupant,Injured,Lap Belt & Harness,F], 6.5%
+[71-100,Pedestrian,Killed], 6.45%
+[Injured,M,Occupant,Lap Belt & Harness,Not Ejected], 6.45%
+[Occupant,Not Ejected,Unknown], 6.45%
+[Injured,F,Occupant,Lap Belt & Harness,Not Ejected], 6.4%
+[Injured,Lap Belt & Harness,Not Ejected,F], 6.4%
+[Occupant,21-50,Not Ejected,F], 6.4%
+[21-50,Complaint of Pain or Nausea], 6.35%
+[Driver,51-70], 6.35%
+[Pedestrian,Pedestrian/Bicyclist/Other Pedestrian Not at Intersection,Killed], 6.35%
+[Pedestrian/Bicyclist/Other Pedestrian Not at Intersection,Killed], 6.35%
+[Not Ejected,51-70], 6.3%
+[Driver,F], 6.25%
+[Internal,21-50], 6.25%
+[Occupant,Not Ejected,Killed], 6.25%
+[Injured,21-50,Complaint of Pain or Nausea], 6.2%
+[Occupant,Internal], 6.2%
+[Injured,21-50,Not Ejected,F], 6.15%
+[Pedestrian/Bicyclist/Other Pedestrian at Intersection,Killed], 6.15%
+[Pedestrian/Bicyclist/Other Pedestrian at Intersection,Pedestrian,Killed], 6.15%
+[Driver,Lap Belt & Harness,M], 6.1%
+[Internal,21-50,Killed], 6.1%
+[Occupant,Injured,21-50,F], 6.1%
+[Occupant,Internal,Killed], 6.1%
+[Severe Bleeding], 6.1%
+[Driver,Occupant,Lap Belt & Harness,M], 6.05%
+[None,M], 6.05%
+[Driver,Injured,21-50,M], 6.0%
+[M,51-70,Killed], 6.0%
+[Severe Bleeding,Killed], 6.0%
+[F,Head], 5.949999999999999%
+[Injured,F,Occupant,21-50,Not Ejected], 5.949999999999999%
+[Complaint of Pain or Nausea,M], 5.8999999999999995%
+[Driver,Lap Belt & Harness,Not Ejected,M], 5.8500000000000005%
+[0-20,Killed], 5.800000000000001%
+[M,Driver,Occupant,Lap Belt & Harness,Not Ejected], 5.800000000000001%
+[Occupant,Injured,51-70], 5.800000000000001%
+[Driver,Head], 5.75%
+[Ejected,M], 5.75%
+[Entire Body,M], 5.75%
+[21-50,Head,Killed], 5.7%
+[Injured,Complaint of Pain or Nausea,M], 5.7%
+[Occupant,Not Ejected,51-70], 5.7%
+[Driver,Internal], 5.65%
+[Injured,Unknown], 5.65%
+[Internal,Head], 5.65%
+[Internal,Head,Killed], 5.65%
+[Driver,21-50,Lap Belt & Harness], 5.6000000000000005%
+[Occupant,Driver,21-50,Lap Belt & Harness], 5.6000000000000005%
+[21-50,Head,M], 5.55%
+[Driver,Internal,Killed], 5.55%
+[F,Pedestrian,Killed], 5.55%
+[Driver,21-50,Killed], 5.5%
+[Injured,M,Driver,21-50,Not Ejected], 5.5%
+[Driver,F,Occupant], 5.45%
+[Knee-Lower Leg Foot], 5.45%
+[Pedestrian/Bicyclist/Other Pedestrian Not at Intersection,M], 5.45%
+[Driver,Ejected], 5.4%
+[Driver,Lap Belt & Harness,21-50,Not Ejected], 5.4%
+[Driver,Occupant,21-50,Lap Belt & Harness,Not Ejected], 5.4%
+[Ejected,Killed], 5.4%
+[Injured,Lap Belt & Harness,Complaint of Pain or Nausea], 5.4%
+[Lap Belt & Harness,Complaint of Pain or Nausea], 5.4%
+[Occupant,51-70,Driver], 5.4%
+[Pedestrian,Pedestrian/Bicyclist/Other Pedestrian Not at Intersection,M], 5.4%
+[Complaint of Pain,21-50], 5.35%
+[Internal,Pedestrian], 5.35%
+[M,Not Ejected,Killed], 5.35%
+[Occupant,Injured,Lap Belt & Harness,Complaint of Pain or Nausea], 5.35%
+[Occupant,Lap Belt & Harness,Complaint of Pain or Nausea], 5.35%
+[21-50,Not Ejected,Complaint of Pain or Nausea], 5.3%
+[Injured,21-50,Complaint of Pain or Nausea,Not Ejected], 5.3%
+[Injured,Lap Belt & Harness,Complaint of Pain or Nausea,Not Ejected], 5.3%
+[Lap Belt & Harness,Not Ejected,Complaint of Pain or Nausea], 5.3%
+[Pedestrian,Head,M], 5.3%
+[21-50,Unknown], 5.25%
+[Driver,F,Not Ejected], 5.25%
+[Driver,Not Ejected,Killed], 5.25%
+[Injured,Complaint of Pain or Nausea,Occupant,Lap Belt & Harness,Not Ejected], 5.25%
+[Injured,Complaint of Pain,21-50], 5.25%
+[Neck], 5.25%
+[Occupant,Entire Body], 5.25%
+[Occupant,Lap Belt & Harness,Complaint of Pain or Nausea,Not Ejected], 5.25%
+[Driver,Injured,21-50,Lap Belt & Harness], 5.2%
+[Injured,Occupant,Driver,Lap Belt & Harness,21-50], 5.2%
+[Occupant,21-50,Killed,M], 5.2%
+[Driver,Complaint of Pain or Nausea], 5.1499999999999995%
+[F,Complaint of Pain or Nausea], 5.1499999999999995%
+[Injured,Neck], 5.1499999999999995%
+[Driver,21-50,Killed,M], 5.1%
+[Internal,Pedestrian,Killed], 5.1%
+[51-70,F], 5.050000000000001%
+[Driver,Injured,Complaint of Pain or Nausea], 5.050000000000001%
+[Injured,Driver,21-50,Lap Belt & Harness,Not Ejected], 5.050000000000001%
+[Injured,Occupant,Driver,Lap Belt & Harness,21-50,Not Ejected], 5.050000000000001%
+[Occupant,Internal,M], 5.050000000000001%
+[Driver,Occupant,Not Ejected,F], 5.0%
+[Injured,M,Occupant,Driver,21-50], 5.0%
+[M,Head,Pedestrian,Killed], 5.0%
+==High-confidence association rules (min_conf=60.0%)
+[Internal,Head] => [Killed] (Conf: 100.0%, Supp: 5.65%)
+[Pedestrian/Bicyclist/Other Pedestrian at Intersection,Killed] => [Pedestrian] (Conf: 100.0%, Supp: 6.15%)
+[Pedestrian/Bicyclist/Other Pedestrian Not at Intersection,Killed] => [Pedestrian] (Conf: 100.0%, Supp: 6.35%)
+[Lap Belt & Harness,Not Ejected,Complaint of Pain or Nausea] => [Injured] (Conf: 100.0%, Supp: 5.3%)
+[Occupant,Not Ejected,Complaint of Pain or Nausea] => [Injured] (Conf: 100.0%, Supp: 7.95%)
+[Occupant,Lap Belt & Harness,Complaint of Pain or Nausea] => [Injured] (Conf: 100.0%, Supp: 5.35%)
+[21-50,Not Ejected,Complaint of Pain or Nausea] => [Injured] (Conf: 100.0%, Supp: 5.3%)
+[Injured,21-50,Not Ejected,Lap Belt & Harness] => [Occupant] (Conf: 100.0%, Supp: 7.95%)
+[Driver,21-50,Not Ejected,Lap Belt & Harness] => [Occupant] (Conf: 100.0%, Supp: 5.4%)
+[Occupant,Lap Belt & Harness,Not Ejected,Complaint of Pain or Nausea] => [Injured] (Conf: 100.0%, Supp: 5.25%)
+[Injured,F,Not Ejected,Lap Belt & Harness] => [Occupant] (Conf: 100.0%, Supp: 6.4%)
+[Injured,Driver,21-50,Lap Belt & Harness,Not Ejected] => [Occupant] (Conf: 100.0%, Supp: 5.050000000000001%)
+[Injured,Lap Belt & Harness] => [Occupant] (Conf: 99.62121212121212%, Supp: 13.15%)
+[Pedestrian/Bicyclist/Other Pedestrian at Intersection] => [Pedestrian] (Conf: 99.49238578680203%, Supp: 9.8%)
+[Driver,Injured,Lap Belt & Harness] => [Occupant] (Conf: 99.37106918238993%, Supp: 7.9%)
+[Lap Belt & Harness,Not Ejected,M] => [Occupant] (Conf: 99.36708860759494%, Supp: 7.85%)
+[Driver,Injured,Lap Belt & Harness,Not Ejected] => [Occupant] (Conf: 99.35064935064936%, Supp: 7.6499999999999995%)
+[Injured,Lap Belt & Harness,M] => [Occupant] (Conf: 99.25373134328358%, Supp: 6.65%)
+[Injured,Lap Belt & Harness,Not Ejected,M] => [Occupant] (Conf: 99.23076923076923%, Supp: 6.45%)
+[Driver,Lap Belt & Harness,Not Ejected,M] => [Occupant] (Conf: 99.14529914529915%, Supp: 5.800000000000001%)
+[Pedestrian/Bicyclist/Other Pedestrian Not at Intersection,M] => [Pedestrian] (Conf: 99.08256880733946%, Supp: 5.4%)
+[Lap Belt & Harness,Complaint of Pain or Nausea] => [Occupant] (Conf: 99.07407407407408%, Supp: 5.35%)
+[Injured,Lap Belt & Harness,Not Ejected,Complaint of Pain or Nausea] => [Occupant] (Conf: 99.05660377358491%, Supp: 5.25%)
+[Injured,Lap Belt & Harness,F] => [Not Ejected] (Conf: 98.46153846153847%, Supp: 6.4%)
+[Occupant,Injured,F,Lap Belt & Harness] => [Not Ejected] (Conf: 98.46153846153847%, Supp: 6.4%)
+[Occupant,Internal] => [Killed] (Conf: 98.38709677419355%, Supp: 6.1%)
+[Severe Bleeding] => [Killed] (Conf: 98.36065573770492%, Supp: 6.0%)
+[Driver,Internal] => [Killed] (Conf: 98.23008849557522%, Supp: 5.55%)
+[Injured,Lap Belt & Harness,Complaint of Pain or Nausea] => [Not Ejected] (Conf: 98.14814814814815%, Supp: 5.3%)
+[Injured,21-50,Lap Belt & Harness] => [Not Ejected] (Conf: 98.14814814814815%, Supp: 7.95%)
+[Occupant,Injured,Complaint of Pain or Nausea] => [Not Ejected] (Conf: 98.14814814814815%, Supp: 7.95%)
+[Occupant,Injured,21-50,Lap Belt & Harness] => [Not Ejected] (Conf: 98.14814814814815%, Supp: 7.95%)
+[21-50,Complaint of Pain] => [Injured] (Conf: 98.13084112149532%, Supp: 5.25%)
+[Occupant,Injured,Lap Belt & Harness,Complaint of Pain or Nausea] => [Not Ejected] (Conf: 98.13084112149532%, Supp: 5.25%)
+[Neck] => [Injured] (Conf: 98.09523809523809%, Supp: 5.1499999999999995%)
+[Driver,Complaint of Pain or Nausea] => [Injured] (Conf: 98.05825242718447%, Supp: 5.050000000000001%)
+[Occupant,Lap Belt & Harness,F] => [Not Ejected] (Conf: 97.85714285714285%, Supp: 6.8500000000000005%)
+[Occupant,Complaint of Pain] => [Not Ejected] (Conf: 97.82608695652173%, Supp: 6.75%)
+[Occupant,Injured,Complaint of Pain] => [Not Ejected] (Conf: 97.76119402985076%, Supp: 6.550000000000001%)
+[Internal,21-50] => [Killed] (Conf: 97.6%, Supp: 6.1%)
+[Occupant,Injured,21-50,F] => [Not Ejected] (Conf: 97.54098360655738%, Supp: 5.949999999999999%)
+[Internal,M] => [Killed] (Conf: 97.26775956284153%, Supp: 8.9%)
+[Occupant,Injured,21-50,M] => [Not Ejected] (Conf: 97.2027972027972%, Supp: 6.950000000000001%)
+[21-50,Lap Belt & Harness] => [Not Ejected] (Conf: 97.1590909090909%, Supp: 8.55%)
+[Occupant,21-50,Lap Belt & Harness] => [Not Ejected] (Conf: 97.1590909090909%, Supp: 8.55%)
+[Driver,Injured,21-50,Lap Belt & Harness] => [Not Ejected] (Conf: 97.11538461538461%, Supp: 5.050000000000001%)
+[Injured,Occupant,Driver,21-50,Lap Belt & Harness] => [Not Ejected] (Conf: 97.11538461538461%, Supp: 5.050000000000001%)
+[Occupant,Complaint of Pain,Not Ejected] => [Injured] (Conf: 97.03703703703704%, Supp: 6.550000000000001%)
+[Occupant,Injured,Lap Belt & Harness,M] => [Not Ejected] (Conf: 96.99248120300751%, Supp: 6.45%)
+[Occupant,Injured,Lap Belt & Harness,Driver] => [Not Ejected] (Conf: 96.83544303797468%, Supp: 7.6499999999999995%)
+[Injured,21-50,F,Not Ejected] => [Occupant] (Conf: 96.7479674796748%, Supp: 5.949999999999999%)
+[M,Complaint of Pain or Nausea] => [Injured] (Conf: 96.61016949152543%, Supp: 5.7%)
+[Driver,21-50,Lap Belt & Harness] => [Not Ejected] (Conf: 96.42857142857143%, Supp: 5.4%)
+[Driver,21-50,Occupant,Lap Belt & Harness] => [Not Ejected] (Conf: 96.42857142857143%, Supp: 5.4%)
+[Lap Belt & Harness,M] => [Not Ejected] (Conf: 96.34146341463415%, Supp: 7.9%)
+[Driver,Lap Belt & Harness] => [Not Ejected] (Conf: 96.33507853403141%, Supp: 9.2%)
+[Occupant,Lap Belt & Harness,M] => [Not Ejected] (Conf: 96.31901840490798%, Supp: 7.85%)
+[21-50,F,Not Ejected] => [Occupant] (Conf: 96.2406015037594%, Supp: 6.4%)
+[Driver,Lap Belt & Harness,M] => [Not Ejected] (Conf: 95.90163934426229%, Supp: 5.8500000000000005%)
+[Driver,Lap Belt & Harness,Occupant,M] => [Not Ejected] (Conf: 95.86776859504133%, Supp: 5.800000000000001%)
+[Occupant,Injured,Driver] => [Not Ejected] (Conf: 95.81589958158996%, Supp: 11.450000000000001%)
+[Occupant,Injured,M] => [Not Ejected] (Conf: 95.63318777292577%, Supp: 10.95%)
+[Internal,Pedestrian] => [Killed] (Conf: 95.32710280373831%, Supp: 5.1%)
+[Driver,Not Ejected,F] => [Occupant] (Conf: 95.23809523809523%, Supp: 5.0%)
+[Occupant,Injured,Driver,M] => [Not Ejected] (Conf: 94.70198675496688%, Supp: 7.1499999999999995%)
+[Complaint of Pain,Not Ejected] => [Occupant] (Conf: 94.4055944055944%, Supp: 6.75%)
+[Pedestrian,Head,M] => [Killed] (Conf: 94.33962264150944%, Supp: 5.0%)
+[Injured,Complaint of Pain,Not Ejected] => [Occupant] (Conf: 94.24460431654677%, Supp: 6.550000000000001%)
+[Occupant,Driver,21-50,Lap Belt & Harness,Not Ejected] => [Injured] (Conf: 93.51851851851852%, Supp: 5.050000000000001%)
+[Lap Belt & Harness,F,Not Ejected] => [Injured] (Conf: 93.43065693430657%, Supp: 6.4%)
+[Occupant,F,Not Ejected,Lap Belt & Harness] => [Injured] (Conf: 93.43065693430657%, Supp: 6.4%)
+[Occupant,21-50,Not Ejected,Lap Belt & Harness] => [Injured] (Conf: 92.98245614035088%, Supp: 7.95%)
+[Occupant,21-50,F,Not Ejected] => [Injured] (Conf: 92.96875%, Supp: 5.949999999999999%)
+[F,Lap Belt & Harness] => [Injured] (Conf: 92.85714285714286%, Supp: 6.5%)
+[Pedestrian,Head] => [Killed] (Conf: 92.73743016759776%, Supp: 8.3%)
+[Driver,21-50,Killed] => [M] (Conf: 92.72727272727272%, Supp: 5.1%)
+[21-50,Not Ejected] => [Occupant] (Conf: 92.26190476190477%, Supp: 15.5%)
+[Occupant,Unknown] => [Not Ejected] (Conf: 92.14285714285714%, Supp: 6.45%)
+[Driver,F,Occupant] => [Not Ejected] (Conf: 91.74311926605505%, Supp: 5.0%)
+[Not Ejected,Unknown] => [Occupant] (Conf: 91.48936170212765%, Supp: 6.45%)
+[71-100,Pedestrian] => [Killed] (Conf: 91.48936170212765%, Supp: 6.45%)
+[Driver,Injured,Not Ejected] => [Occupant] (Conf: 90.51383399209486%, Supp: 11.450000000000001%)
+[Not Ejected,51-70] => [Occupant] (Conf: 90.47619047619048%, Supp: 5.7%)
+[21-50,Not Ejected,M] => [Occupant] (Conf: 89.65517241379311%, Supp: 9.1%)
+[Driver,21-50,Not Ejected,M] => [Occupant] (Conf: 89.1891891891892%, Supp: 6.6000000000000005%)
+[Injured,Not Ejected,M] => [Occupant] (Conf: 89.02439024390245%, Supp: 10.95%)
+[Driver,Injured,M] => [Not Ejected] (Conf: 88.10810810810811%, Supp: 8.15%)
+[Injured,21-50,Not Ejected,M] => [Occupant] (Conf: 87.9746835443038%, Supp: 6.950000000000001%)
+[Occupant,Driver,Killed] => [M] (Conf: 87.93103448275862%, Supp: 7.6499999999999995%)
+[Occupant,21-50,F] => [Injured] (Conf: 87.76978417266187%, Supp: 6.1%)
+[Driver,Injured,Not Ejected,M] => [Occupant] (Conf: 87.73006134969326%, Supp: 7.1499999999999995%)
+[Driver,F] => [Occupant] (Conf: 87.2%, Supp: 5.45%)
+[Driver,Killed] => [M] (Conf: 86.60287081339713%, Supp: 9.049999999999999%)
+[Injured,21-50,Complaint of Pain or Nausea] => [Not Ejected] (Conf: 85.48387096774194%, Supp: 5.3%)
+[Ejected] => [M] (Conf: 85.18518518518519%, Supp: 5.75%)
+[Driver,51-70] => [Occupant] (Conf: 85.03937007874016%, Supp: 5.4%)
+[Driver,M,Killed] => [Occupant] (Conf: 84.5303867403315%, Supp: 7.6499999999999995%)
+[Occupant,Lap Belt & Harness,Driver,Not Ejected] => [Injured] (Conf: 83.60655737704919%, Supp: 7.6499999999999995%)
+[21-50,Complaint of Pain or Nausea] => [Not Ejected] (Conf: 83.46456692913385%, Supp: 5.3%)
+[Driver,21-50,M] => [Occupant] (Conf: 83.33333333333334%, Supp: 9.25%)
+[Driver,Injured,21-50,M] => [Occupant] (Conf: 83.33333333333334%, Supp: 5.0%)
+[Occupant,Lap Belt & Harness,Driver] => [Injured] (Conf: 83.15789473684211%, Supp: 7.9%)
+[None] => [M] (Conf: 82.31292517006803%, Supp: 6.05%)
+[Occupant,Lap Belt & Harness,Not Ejected,M] => [Injured] (Conf: 82.16560509554141%, Supp: 6.45%)
+[Injured,21-50,F] => [Occupant] (Conf: 78.2051282051282%, Supp: 6.1%)
+[Not Ejected,Killed] => [M] (Conf: 78.1021897810219%, Supp: 5.35%)
+[Occupant,21-50,Driver] => [Not Ejected] (Conf: 77.68924302788844%, Supp: 9.75%)
+[71-100,Killed] => [Pedestrian] (Conf: 76.78571428571429%, Supp: 6.45%)
+[Occupant,0-20] => [Injured] (Conf: 76.59574468085107%, Supp: 7.199999999999999%)
+[21-50,F] => [Injured] (Conf: 75.72815533980582%, Supp: 7.8%)
+[51-70,Pedestrian] => [Killed] (Conf: 75.11520737327189%, Supp: 8.15%)
+[Injured,21-50] => [Occupant] (Conf: 74.86818980667839%, Supp: 21.3%)
+[Injured,0-20] => [Occupant] (Conf: 73.84615384615385%, Supp: 7.199999999999999%)
+[Occupant,21-50,M] => [Not Ejected] (Conf: 73.68421052631578%, Supp: 9.1%)
+[Injured,21-50,M] => [Occupant] (Conf: 72.95918367346938%, Supp: 7.1499999999999995%)
+[21-50,Head] => [M] (Conf: 72.54901960784314%, Supp: 5.55%)
+[Occupant,21-50,Not Ejected,M] => [Driver] (Conf: 72.52747252747253%, Supp: 6.6000000000000005%)
+[Occupant,21-50,Driver,M] => [Not Ejected] (Conf: 71.35135135135135%, Supp: 6.6000000000000005%)
+[F,Pedestrian] => [Killed] (Conf: 70.25316455696202%, Supp: 5.55%)
+[Occupant,Not Ejected,Driver] => [Injured] (Conf: 70.24539877300614%, Supp: 11.450000000000001%)
+[Pedestrian/Bicyclist/Other Pedestrian Not at Intersection] => [M] (Conf: 69.42675159235668%, Supp: 5.45%)
+[Pedestrian,Pedestrian/Bicyclist/Other Pedestrian Not at Intersection] => [M] (Conf: 69.23076923076923%, Supp: 5.4%)
+[F,Killed] => [Pedestrian] (Conf: 68.94409937888199%, Supp: 5.55%)
+[71-100] => [Pedestrian] (Conf: 66.82464454976304%, Supp: 7.049999999999999%)
+[Occupant,Injured,Not Ejected,Driver] => [Lap Belt & Harness] (Conf: 66.8122270742358%, Supp: 7.6499999999999995%)
+[Occupant,Injured,Not Ejected,Complaint of Pain or Nausea] => [Lap Belt & Harness] (Conf: 66.0377358490566%, Supp: 5.25%)
+[Injured,Occupant,Driver,Lap Belt & Harness,Not Ejected] => [21-50] (Conf: 66.01307189542483%, Supp: 5.050000000000001%)
+[Driver,Injured] => [21-50] (Conf: 65.95744680851064%, Supp: 9.3%)
+[Occupant,Complaint of Pain or Nausea] => [Lap Belt & Harness] (Conf: 65.6441717791411%, Supp: 5.35%)
+[Head] => [M] (Conf: 65.40697674418605%, Supp: 11.25%)
+[Injured,Occupant,Driver,21-50,Not Ejected] => [Lap Belt & Harness] (Conf: 64.74358974358975%, Supp: 5.050000000000001%)
+[Occupant,Injured,21-50,Driver] => [Lap Belt & Harness] (Conf: 64.59627329192547%, Supp: 5.2%)
+[51-70,M] => [Killed] (Conf: 64.51612903225806%, Supp: 6.0%)
+[Driver,Not Ejected,M] => [Injured] (Conf: 64.42687747035573%, Supp: 8.15%)
+[21-50,Pedestrian] => [Killed] (Conf: 64.0625%, Supp: 8.200000000000001%)
+[Injured,Occupant,21-50,Lap Belt & Harness,Not Ejected] => [Driver] (Conf: 63.52201257861635%, Supp: 5.050000000000001%)
+[Injured,51-70] => [Occupant] (Conf: 63.387978142076506%, Supp: 5.800000000000001%)
+[21-50,Lap Belt & Harness,Not Ejected] => [Driver] (Conf: 63.1578947368421%, Supp: 5.4%)
+[Pedestrian,Killed,M] => [Head] (Conf: 62.893081761006286%, Supp: 5.0%)
+[Entire Body] => [M] (Conf: 62.841530054644814%, Supp: 5.75%)
+[Driver,21-50] => [Injured] (Conf: 62.83783783783784%, Supp: 9.3%)
+[Lap Belt & Harness] => [Driver] (Conf: 62.82894736842105%, Supp: 9.55%)
+[Pedestrian/Bicyclist/Other Pedestrian at Intersection,Pedestrian] => [Killed] (Conf: 62.755102040816325%, Supp: 6.15%)
+[Lap Belt & Harness,Not Ejected] => [Driver] (Conf: 62.37288135593221%, Supp: 9.2%)
+[Not Ejected,Complaint of Pain or Nausea] => [21-50] (Conf: 62.35294117647059%, Supp: 5.3%)
+[Injured,Not Ejected,Complaint of Pain or Nausea] => [Lap Belt & Harness] (Conf: 62.35294117647059%, Supp: 5.3%)
+[Injured,Not Ejected,F] => [Lap Belt & Harness] (Conf: 62.13592233009708%, Supp: 6.4%)
+[Occupant,Driver,M] => [21-50] (Conf: 60.85526315789473%, Supp: 9.25%)
+[Occupant,Injured,21-50] => [Not Ejected] (Conf: 60.56338028169014%, Supp: 12.9%)
+[0-20] => [Occupant] (Conf: 60.45016077170418%, Supp: 9.4%)
+[Occupant,M] => [21-50] (Conf: 60.24390243902439%, Supp: 12.35%)
+[Pedestrian,Head,Killed] => [M] (Conf: 60.24096385542169%, Supp: 5.0%)
+[Occupant,Injured,Lap Belt & Harness] => [Driver] (Conf: 60.07604562737643%, Supp: 7.9%)

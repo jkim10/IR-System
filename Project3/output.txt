@@ -1,2 +1,0 @@
-==Frequent Itemsets (min_sup=0.1)
-==High-confidence association rules (min_conf=0.3)
