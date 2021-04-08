@@ -33,13 +33,6 @@ if __name__ == "__main__":
         data = list(rows)
         data = data[1:]
 
-    # Comment this out to use real data    
-    # data = [
-    #         ["pen","ink","diary","soap"],
-    #         ["pen","ink","diary"],
-    #         ['pen',"diary"],
-    #         ['pen',"ink","soap"]
-    #        ]
     min_sup = float(sys.argv[2])
     min_conf = float(sys.argv[3])
     candidate = set()
@@ -48,7 +41,6 @@ if __name__ == "__main__":
     num_rows = len(data)
     num_columns = len(data[0])
 
-    # TODO: Apriori Algorithm
     # Calculate L1 Itemsets (line 1 of algorithm)
     for row in data:
         for x in row:
@@ -77,19 +69,16 @@ if __name__ == "__main__":
 
 
     
-    # Uncomment when we ready to output
-    # out = open("output.txt","w")
-    print(f"==Frequent Itemsets (min_sup={min_sup*100}%)")
-    # # TODO: Print Frequent Itemsets
+    out = open("output.txt","w")
+    out.write(f"==Frequent Itemsets (min_sup={min_sup*100}%)\n")
     sup_print = []
     for freq in L.keys():
         support = L[freq] / num_rows
         sup_print.append((','.join(freq), support))
     sup_print = sorted(sup_print, key=lambda x: (-x[1],x[0]))
     for x in sup_print:
-        print(f"[{x[0]}], {x[1]*100}%")
-    print(f"==High-confidence association rules (min_conf={min_conf*100}%)")
-    # # TODO: Print High Confidence association rules
+        out.write(f"[{x[0]}], {x[1]*100}%\n")
+    out.write(f"==High-confidence association rules (min_conf={min_conf*100}%)\n")
     above_conf = []
     seen = set()
     for freq in L.keys():
@@ -108,4 +97,4 @@ if __name__ == "__main__":
                 above_conf.append((left_hs,n,confidence,support))
     above_conf = sorted(above_conf,key=lambda x: (-x[2],x[0]))
     for passed in above_conf:
-        print(f"[{','.join(passed[0])}] => [{passed[1]}] (Conf: {passed[2]*100}%, Supp: {passed[3]*100}%)")
+        out.write(f"[{','.join(passed[0])}] => [{passed[1]}] (Conf: {passed[2]*100}%, Supp: {passed[3]*100}%)\n")
