@@ -2,7 +2,10 @@
 By Justin Kim(jyk2149) and Mavis Athene U Chen(mu2288)
 
 ## Files in Submission
-- extract_associations.py
+- proj3.tar.gz
+    - extract_associations.py
+    - integrated_dataset.csv
+    - output.txt
 - integrated_dataset.csv
 - example-run.txt
 - README.md
