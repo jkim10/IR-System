@@ -81,10 +81,13 @@ if __name__ == "__main__":
     # out = open("output.txt","w")
     print(f"==Frequent Itemsets (min_sup={min_sup*100}%)")
     # # TODO: Print Frequent Itemsets
+    sup_print = []
     for freq in L.keys():
         support = L[freq] / num_rows
-        print(f"[{','.join(freq)}], {support*100}%")
-
+        sup_print.append((','.join(freq), support))
+    sup_print = sorted(sup_print, key=lambda x: (-x[1],x[0]))
+    for x in sup_print:
+        print(f"[{x[0]}], {x[1]*100}%")
     print(f"==High-confidence association rules (min_conf={min_conf*100}%)")
     # # TODO: Print High Confidence association rules
     above_conf = []
@@ -103,6 +106,6 @@ if __name__ == "__main__":
             support = L[freq] / num_rows
             if(confidence > min_conf):
                 above_conf.append((left_hs,n,confidence,support))
-    above_conf = sorted(above_conf,key=lambda x: x[2],reverse=True)
+    above_conf = sorted(above_conf,key=lambda x: (-x[2],x[0]))
     for passed in above_conf:
         print(f"[{','.join(passed[0])}] => [{passed[1]}] (Conf: {passed[2]*100}%, Supp: {passed[3]*100}%)")
